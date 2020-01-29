@@ -5,7 +5,7 @@ RSpec.describe I18n::Smartling::FrontmatterFilter do
     <<~FRONTMATTER
       *** ** * ** ***
 
-      `title:` Before you begin
+      `title:`Before you begin
       `navigation_weight:` 0
       ------------------------------------------
     FRONTMATTER
@@ -17,7 +17,7 @@ RSpec.describe I18n::Smartling::FrontmatterFilter do
       <<~FRONTMATTER
         ---
         title: Before you begin
-        navigation_weight: 0
+        navigation_weight:  0
 
         ---
 
