@@ -27,6 +27,7 @@ class MarkdownPipeline < Banzai::Pipeline
       ConceptListFilter.new(options),
       LanguageFilter,
       ColumnsFilter,
+      SnippetVariablesFilter,
       MarkdownFilter.new(options),
 
       # As HTML
