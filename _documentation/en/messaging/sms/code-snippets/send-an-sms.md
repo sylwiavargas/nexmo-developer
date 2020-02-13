@@ -8,11 +8,11 @@ navigation_weight: 2
 
 To send an SMS, replace the following variables in the example below:
 
-Key | Description
--- | --
-`TO_NUMBER` | The number you are sending the SMS to in E.164  format. For example `447700900000`.
-`NEXMO_API_KEY` | You can find this in your account overview
-`NEXMO_API_SECRET` | You can find this in your account overview
+```snippet_variables
+- TO_NUMBER
+- NEXMO_API_KEY
+- NEXMO_API_SECRET
+```
 
 ```code_snippets
 source: '_examples/messaging/sms/send-an-sms'
