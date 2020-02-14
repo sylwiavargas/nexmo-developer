@@ -3,7 +3,8 @@ class SmartlingPipeline < Banzai::Pipeline
     super(
       I18n::Smartling::FrontmatterFilter,
       I18n::Smartling::EscapeFilter,
-      I18n::Smartling::CodeBlockFilter
+      I18n::Smartling::CodeBlockFilter,
+      I18n::Smartling::TableFilter
     )
   end
 end
