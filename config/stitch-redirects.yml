@@ -132,3 +132,9 @@
 "/client-sdk/tutorials/ios-in-app-messaging": "/client-sdk/tutorials/ios-in-app-messaging-chat"
 "/client-sdk/in-app-messaging/guides/simple-conversation": "/client-sdk/tutorials/in-app-messaging/introduction"
 "/client-sdk/getting-started/add-sdk-to-your-app/android": "/client-sdk/setup/add-sdk-to-your-app/android"
+
+"/client-sdk/tutorials/app-to-phone": "/client-sdk/in-app-voice/tutorials/app-to-phone"
+"/client-sdk/tutorials/phone-to-app": "/client-sdk/in-app-voice/tutorials/phone-to-app"
+"/client-sdk/tutorials/in-app-messaging": "/client-sdk/in-app-voice/tutorials/in-app-messaging"
+"/client-sdk/tutorials/ios-in-app-messaging-chat": "/client-sdk/in-app-messaging/tutorials/ios-in-app-messaging-chat"
+"/client-sdk/tutorials/app-to-app": "/client-sdk/in-app-messaging/tutorials/app-to-app"

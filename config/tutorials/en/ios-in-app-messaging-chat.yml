@@ -1,7 +1,7 @@
 title: Creating an iOS chat app
 description: Create a iOS application that enables users to message each other
 products:
-  - client-sdk
+  - client-sdk/in-app-messaging
 
 introduction:
   title: Introduction to this task
