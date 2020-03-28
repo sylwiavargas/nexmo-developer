@@ -7,6 +7,31 @@ navigation_weight: 0
 # Release Notes
 
 
+## two-one-nine - 2020-03-28
+
+### Fixed
+- iOS 13 push notifications support
+- Start server call fix stability
+- Receiving a DTMF event in call and conversation
+
+### Added
+NXMConversationDelegate did receive DTMF event method
+```
+- (void)conversation:(nonnull NXMConversation *)conversation didReceiveDTMFEvent:(nullable NXMDTMFEvent *)event;
+```
+
+### Changed
+NXMClient client enable push notifications method changed
+param pushKitToken - only for voip push (incoming calls)
+param userNotificationToken - all push types
+```
+- (void)enablePushNotificationsWithPushKitToken:(nullable NSData *)pushKitToken
+                          userNotificationToken:(nullable NSData *)userNotificationToken
+                                      isSandbox:(BOOL)isSandbox
+                              completionHandler:(void(^_Nullable)(NSError * _Nullable error))completionHandler;
+```
+
+
 ## 2.1.5 - 2020-03-18
 
 ### Internal
@@ -442,3 +467,4 @@ NXMClient myClient
 
 	- **Cocoapods**  
 	  https://cocoapods.org/pods/nexmoclient
+
