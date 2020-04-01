@@ -2,6 +2,8 @@ version: '3'
 services:
   db:
     image: postgres
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
   web:
     image: nexmodeveloper_app
     build: .
@@ -31,7 +33,7 @@ services:
   update:
     image: nexmodeveloper_app
     build: .
-    command: bash -c "rake db:setup"
+    command: bash -c "bundle exec rake db:setup"
     volumes:
       - .:/app
     depends_on:
