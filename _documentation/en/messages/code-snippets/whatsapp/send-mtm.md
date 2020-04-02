@@ -32,7 +32,7 @@ Key | Description
 -- | --
 `API_ENDPOINT` | The endpoint is `https://messages-sandbox.nexmo.com/v0.1/messages`.
 `WHATSAPP_NUMBER` | The WhatsApp number is `14157386170`.
-`WHATSAPP_TEMPLATE_NAMESPACE` | `whatsapp:hsm:technology:nexmo`
+`WHATSAPP_TEMPLATE_NAMESPACE` | `9b6b4fcb_da19_4a26_8fe8_78074a91b584`
 `WHATSAPP_TEMPLATE_NAME` | `verify`
 
 > **NOTE:** Don't use a leading `+` or `00` when entering a phone number, start with the country code, for example, 447700900000.
