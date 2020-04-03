@@ -25,8 +25,6 @@ gem 'coffee-rails', '~> 5.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-# Add clipboard for copying content
-gem 'clipboard-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.10.0'

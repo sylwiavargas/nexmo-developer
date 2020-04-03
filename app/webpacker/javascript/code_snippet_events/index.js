@@ -1,3 +1,5 @@
+import * as Clipboard from 'clipboard';
+
 export default () => {
     let hasTriggeredCopyStat = {};
     let hasTriggeredLinkStat = {};

@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery-scrolltofixed
-//= require clipboard
 //= require underscore
 //= require gmaps/google
 //= require javascripts/nexmo-oas-renderer
