@@ -18,5 +18,4 @@ application:
 
 ## Try it out
 
-When you call your Nexmo Number you will hear a prompt to say a message. You will hear your message said back to you after being
-converted into text with ASR.
+When you call your Nexmo Number you will hear a prompt to say a message. You will hear your message said back to you after being converted into text with ASR.
