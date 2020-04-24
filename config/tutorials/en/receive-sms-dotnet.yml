@@ -1,9 +1,28 @@
 ---
-title: Receive SMS Messages with ASP.NET MVC Framework
-external_link: https://www.nexmo.com/blog/2017/03/31/recieve-sms-messages-with-asp-net-mvc-framework-dr/
+title: Receive SMS Messages with the .NET framework
 products:
  - messaging/sms
 description: A tutorial to show how your ASP .NET MVC application can use the Nexmo c# library to receive SMS messages from your users and display them in your output window.
 languages:
  - dotnet
 ---
+
+introduction:
+  title: Introduction to this task
+  description: This task shows you how to receive an SMS message into a simple asp.net mvc controller
+  content: |
+    # Introduction
+    In this tutorial, we will learn how to receive an SMS message into a simple asp.net mvc core application.
+  
+prerequisites:
+- create-nexmo-account
+- create-mvc-app
+
+tasks:
+  - install-nexmo-nuget-package  
+  - messaging/dotnet/create-sms-controller
+  - messaging/dotnet/add-nexmo-using-statements
+  - messaging/dotnet/add-inbound-sms-route
+  - run-ngrok
+  - messaging/dotnet/add-inbound-sms-route.md
+  - messaging/dotnet/receive-an-sms.md

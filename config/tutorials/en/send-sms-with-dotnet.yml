@@ -1,5 +1,4 @@
 title: Send SMS Message in .NET
-# external_link: https://www.nexmo.com/blog/2017/03/23/send-sms-messages-asp-net-mvc-framework-dr/
 products:
  - messaging/sms
 description: Enhance your .NET application by adding the ability to send SMS messages to users. This tutorial walks you through adding a simple form to your web application, and sending an SMS message to the number provided.
@@ -8,10 +7,10 @@ languages:
 
 introduction:
   title: Introduction to this task
-  description: This task shows you how to send an SMS message from a simple ASP.NET MVC web form
+  description: This task shows you how to send an SMS message from a simple asp.net mvc web form
   content: |
     # Introduction
-    In this tutorial, we will learn how to send an SMS message from a simple ASP.NET core application.
+    In this tutorial, we will learn how to send an SMS message from a simple asp.net core application.
   
 prerequisites:
 - create-nexmo-account
@@ -44,4 +43,3 @@ conclusion:
     * And much more
 
     We want to hear what ideas you have in mind? Contact us at [devrel@nexmo.com](mailto:devrel@nexmo.com)
-        
