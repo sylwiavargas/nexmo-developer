@@ -76,12 +76,12 @@ page:
       column:
       - type: tutorial
         tutorial:
-          name: two-factor-authentication-dotnet-verify-api
+          name: two-factor-authentication-dotnet-verify-api/base
     - width: 2
       column:
       - type: tutorial
         tutorial:
-          name: number-insight-api-aspnet
+          name: number-insight-api-aspnet/base
   - row: 
     - column:
       - type: github_repo
