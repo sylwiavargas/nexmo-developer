@@ -6,7 +6,7 @@ class TutorialListItem
   end
 
   def tutorial
-    @tutorial ||= Nexmo::Markdown::Tutorial.load(File.basename(@path, '.yml'), nil)
+    @tutorial ||= Nexmo::Markdown::Tutorial.load(tutorial_name, nil)
   end
 
   def subtitle
@@ -28,8 +28,8 @@ class TutorialListItem
     @path.gsub("#{Rails.configuration.docs_base_path}/", '')
   end
 
-  def filename
-    File.basename(@path, '.yml')
+  def tutorial_name
+    File.dirname(path).gsub("#{root}/#{I18n.default_locale}/", '')
   end
 
   def external_link
@@ -69,7 +69,7 @@ class TutorialListItem
   end
 
   def url
-    external_link || "/#{products.join('')}/tutorials/#{filename}"
+    external_link || "/#{products.join('')}/tutorials/#{tutorial_name}"
   end
 
   def available_languages
@@ -77,7 +77,7 @@ class TutorialListItem
       OpenStruct.new(
         language: language,
         label: Nexmo::Markdown::CodeLanguage.find(language).label,
-        url: external_link || "/#{products.join('')}/tutorials/#{filename}/#{first_step}/#{language}"
+        url: external_link || "/#{products.join('')}/tutorials/#{tutorial_name}/#{first_step}/#{language}"
       )
     end
   end
@@ -86,7 +86,7 @@ class TutorialListItem
     {
       root: root,
       path: path,
-      filename: filename,
+      tutorial_name: tutorial_name,
       external_link: external_link,
       first_step: first_step,
       languages: languages,

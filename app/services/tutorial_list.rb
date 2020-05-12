@@ -31,7 +31,7 @@ class TutorialList
   def self.all
     tasks = []
     # TODO: make this work with I18n fallback
-    Dir.glob("#{Rails.configuration.docs_base_path}/config/tutorials/#{I18n.default_locale}/*.yml") do |path|
+    Dir.glob("#{Rails.configuration.docs_base_path}/config/tutorials/#{I18n.default_locale}/*/base.yml") do |path|
       tasks.push(TutorialListItem.new(path))
     end
     tasks
