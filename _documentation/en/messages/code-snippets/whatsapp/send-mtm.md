@@ -10,8 +10,6 @@ In this code snippet you learn how to send a WhatsApp Message Template Message (
 
 > **IMPORTANT:** If a customer messages you, you have 24 hours to respond to the customer with a free-form message. After this period you must use a message template (MTM). If a customer has not messaged you first, then the first time you send a message to a user, WhatsApp requires that the message contains a template. This is explained in more detail in the [Understanding WhatsApp topic](/messages/concepts/whatsapp).
 
-> **NOTE:** The Header and Footer lengths are currently limited to 60 characters each and the Message body length is limited to 1024 characters.
-
 ## Example
 
 Ensure the following variables are set to your required values using any convenient method:
