@@ -8,12 +8,11 @@
           <div class="Vlt-col Nxd-landing-col">
         <% end %>
         <% info["column"].each do |data| %>
-        <%
-          unless lookup_context.exists?(data['type'], "static/default_landing/partials", true)
-          raise "Could not find the #{data['type']} partial file."
-          end
-        %>
-        <%= render partial: "static/default_landing/partials/#{data['type']}", locals: data[data['type']] %>
+        <% if File.exists?("#{Rails.root}/app/components/#{data['type']}_component.rb") %>
+          <%= render("#{data['type'].camelize}Component".constantize.new(data: data[data['type']])) %>
+        <% else %>
+          <%= render partial: "static/default_landing/partials/#{data['type']}", locals: data[data['type']] %>
+        <% end %>
         <% end %>
         </div>
       <% end %>

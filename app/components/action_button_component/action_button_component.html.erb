@@ -1,0 +1,9 @@
+<% if center_button? %>
+    <div class="Vlt-center">
+<% end %>
+<a class="Vlt-btn Vlt-btn--<%= assign_button_type %> <%= 'Vlt-btn--large' if large_button? %>" href="<%= assign_url %>">
+<%= assign_text %>
+</a>
+<% if center_button? %>
+    </div>
+<% end %>

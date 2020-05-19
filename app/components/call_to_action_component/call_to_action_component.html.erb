@@ -1,0 +1,16 @@
+<div class="center">
+    <h2>
+        <a href="<%= @data['url'] %>">
+            <div>
+                <svg class="Vlt-icon Vlt-icon--large Vlt-<%= assign_icon_color %>">
+                <use xlink:href="<%= assign_icon_name %>"></use>
+                </svg>
+            </div>
+    <%= assign_title %>
+        </a>
+    </h2>
+<% if assign_subtitle %>
+    <p><%= assign_subtitle %></p>
+<% end %>
+  <%= assign_text %>
+</div>

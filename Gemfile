@@ -28,6 +28,9 @@ gem 'jquery-rails'
 # Add clipboard for copying content
 gem 'clipboard-rails'
 
+# Add gem for view components
+gem 'view_component'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.10.0'
 # Use Redis adapter to run Action Cable in production
