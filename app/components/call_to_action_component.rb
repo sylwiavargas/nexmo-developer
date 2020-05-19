@@ -4,7 +4,7 @@ class CallToActionComponent < ViewComponent::Base
 
     check_config!
   end
-  
+
   def assign_url
     @data['url']
   end
@@ -14,7 +14,7 @@ class CallToActionComponent < ViewComponent::Base
   end
 
   def assign_icon_name
-    if @data['icon']['name'].start_with?("Brand")
+    if @data['icon']['name'].start_with?('Brand')
       "/symbol/volta-brand-icons.svg##{@data['icon']['name']}"
     else
       "/symbol/volta-icons.svg#Vlt-#{@data['icon']['name']}"
@@ -26,23 +26,21 @@ class CallToActionComponent < ViewComponent::Base
   end
 
   def assign_subtitle
-    @data['subtitle'].render_markdown if @data['subtitle']
+    @data['subtitle']&.render_markdown
   end
 
   def assign_text
-    if @data['text']
-      @data['text'].each do |text|
-        if text['type'] == 'large'
-          return "
+    @data['text']&.each do |text|
+      if text['type'] == 'large'
+        return "
             <p class=\"p-large\">
-            #{text['content'].render_markdown({skip_paragraph_surround: true})}
+            #{text['content'].render_markdown({ skip_paragraph_surround: true })}
             </p>
           ".html_safe
-        elsif text['type'] == 'small'
-          return text['content'].render_markdown
-        else 
-          raise "Unknown text type: #{text['type']}"
-        end
+      elsif text['type'] == 'small'
+        return text['content'].render_markdown
+      else
+        raise "Unknown text type: #{text['type']}"
       end
     end
   end

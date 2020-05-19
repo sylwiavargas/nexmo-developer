@@ -6,11 +6,11 @@ class ActionButtonComponent < ViewComponent::Base
   end
 
   def center_button?
-    @data['center_button'] == true ? true : false
+    @data['center_button']
   end
 
   def assign_button_type
-    @data['type'] ? @data['type'] : 'primary'
+    @data['type'] || 'primary'
   end
 
   def large_button?

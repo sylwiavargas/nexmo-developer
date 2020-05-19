@@ -1,4 +1,4 @@
-require "rails_helper"
+require 'rails_helper'
 
 RSpec.describe CallToActionComponent, type: :component do
   context 'with valid inputs' do
@@ -19,15 +19,15 @@ RSpec.describe CallToActionComponent, type: :component do
     end
 
     it 'returns the assigned icon color' do
-      expect(@component.assign_icon_color).to eql('blue')     
+      expect(@component.assign_icon_color).to eql('blue')
     end
 
     it 'returns the assigned icon name with path' do
-      expect(@component.assign_icon_name).to eql('/symbol/volta-icons.svg#Vlt-icon-phone')     
+      expect(@component.assign_icon_name).to eql('/symbol/volta-icons.svg#Vlt-icon-phone')
     end
 
     it 'returns the assigned text' do
-      expect(@component.assign_text).to eql('<p>Some text</p>')     
+      expect(@component.assign_text).to eql('<p>Some text</p>')
     end
   end
 
@@ -49,88 +49,87 @@ RSpec.describe CallToActionComponent, type: :component do
     end
   end
 
-
   def valid_input
     {
-      'title'=>'A Title', 
-      'subtitle'=>'A Subtitle', 
-      'icon'=>{
-        'name'=>'icon-phone', 
-        'color'=>'blue'
-      }, 
-      'url'=>'/path',
-      'text'=>[
+      'title' => 'A Title',
+      'subtitle' => 'A Subtitle',
+      'icon' => {
+        'name' => 'icon-phone',
+        'color' => 'blue',
+      },
+      'url' => '/path',
+      'text' => [
         {
-          'type'=>'small',
-          'content'=>'Some text'
-        }
-      ]
+          'type' => 'small',
+          'content' => 'Some text',
+        },
+      ],
     }
   end
 
   def missing_url_input
     {
-      'title'=>'A Title', 
-      'subtitle'=>'A Subtitle', 
-      'icon'=>{
-        'name'=>'icon-phone', 
-        'color'=>'blue'
-      }, 
-      'text'=>[
+      'title' => 'A Title',
+      'subtitle' => 'A Subtitle',
+      'icon' => {
+        'name' => 'icon-phone',
+        'color' => 'blue',
+      },
+      'text' => [
         {
-          'type'=>'small',
-          'content'=>'Some text'
-        }
-      ]
+          'type' => 'small',
+          'content' => 'Some text',
+        },
+      ],
     }
   end
 
   def missing_title_input
     {
-      'subtitle'=>'A Subtitle', 
-      'icon'=>{
-        'name'=>'icon-phone', 
-        'color'=>'blue'
-      }, 
-      'url'=>'/path',
-      'text'=>[
+      'subtitle' => 'A Subtitle',
+      'icon' => {
+        'name' => 'icon-phone',
+        'color' => 'blue',
+      },
+      'url' => '/path',
+      'text' => [
         {
-          'type'=>'small',
-          'content'=>'Some text'
-        }
-      ]
+          'type' => 'small',
+          'content' => 'Some text',
+        },
+      ],
     }
   end
 
   def missing_icon_color_input
     {
-      'subtitle'=>'A Subtitle', 
-      'icon'=>{
-        'name'=>'icon-phone', 
-      }, 
-      'url'=>'/path',
-      'text'=>[
+      'subtitle' => 'A Subtitle',
+      'icon' => {
+        'name' => 'icon-phone',
+      },
+      'url' => '/path',
+      'text' => [
         {
-          'type'=>'small',
-          'content'=>'Some text'
-        }
-      ]
+          'type' => 'small',
+          'content' => 'Some text',
+        },
+      ],
     }
   end
 
   def missing_icon_name_input
     {
-      'subtitle'=>'A Subtitle', 
-      'icon'=>{
-        'color'=>'blue'
-      }, 
-      'url'=>'/path',
-      'text'=>[
+      'subtitle' => 'A Subtitle',
+      'icon' => {
+        'color' => 'blue',
+      },
+      'url' => '/path',
+      'text' => [
         {
-          'type'=>'small',
-          'content'=>'Some text'
-        }
-      ]
+          'type' => 'small',
+          'content' => 'Some text',
+        },
+      ],
     }
   end
 end

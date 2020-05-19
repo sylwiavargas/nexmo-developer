@@ -1,4 +1,4 @@
-require "rails_helper"
+require 'rails_helper'
 
 RSpec.describe ActionButtonComponent, type: :component do
   context 'with valid inputs' do
@@ -37,26 +37,25 @@ RSpec.describe ActionButtonComponent, type: :component do
     end
   end
 
-
   def valid_input
     {
-      'text'=>'An action button', 
-      'url'=>'https://dashboard.nexmo.com/sign-up', 
-      'center_button'=>true
+      'text' => 'An action button',
+      'url' => 'https://dashboard.nexmo.com/sign-up',
+      'center_button' => true,
     }
   end
 
   def missing_url_input
     {
-      'text'=>'An action button',
-      "center_button"=>true
+      'text' => 'An action button',
+      'center_button' => true,
     }
   end
 
   def missing_text_input
     {
-      'url'=>'https://dashboard.nexmo.com/sign-up', 
-      'center_button'=>true
+      'url' => 'https://dashboard.nexmo.com/sign-up',
+      'center_button' => true,
       }
   end
 end
