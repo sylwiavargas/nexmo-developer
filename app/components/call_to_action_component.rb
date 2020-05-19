@@ -26,7 +26,7 @@ class CallToActionComponent < ViewComponent::Base
   end
 
   def assign_subtitle
-    @data['subtitle'].render_markdown
+    @data['subtitle'].render_markdown if @data['subtitle']
   end
 
   def assign_text
