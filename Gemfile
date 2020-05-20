@@ -29,7 +29,7 @@ gem 'jquery-rails'
 gem 'clipboard-rails'
 
 # Add gem for view components
-gem 'view_component', git: 'git://github.com/github/view_component.git', ref: 'c0ca7b9cea20c5271f6d560cf9e7a6e3423e31ef'
+gem 'view_component', '~> 2.7.0'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.10.0'

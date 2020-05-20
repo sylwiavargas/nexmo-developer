@@ -1,12 +1,4 @@
 GIT
-  remote: git://github.com/github/view_component.git
-  revision: c0ca7b9cea20c5271f6d560cf9e7a6e3423e31ef
-  ref: c0ca7b9cea20c5271f6d560cf9e7a6e3423e31ef
-  specs:
-    view_component (2.6.0)
-      activesupport (>= 5.0.0, < 7.0)
-
-GIT
   remote: https://github.com/nexmo/nexmo-markdown-renderer.git
   revision: 34bc81d6196a9be988059a09db45bbeee0893ef0
   branch: fix-kotlin-icon
@@ -530,6 +522,8 @@ GEM
     unf_ext (0.0.7.6)
     unicode-display_width (1.7.0)
     unicode_utils (1.4.0)
+    view_component (2.7.0)
+      activesupport (>= 5.0.0, < 7.0)
     warden (1.2.8)
       rack (>= 2.0.6)
     web-console (4.0.2)
@@ -623,7 +617,7 @@ DEPENDENCIES
   truncato
   tzinfo-data
   uglifier (>= 4.1.20)
-  view_component!
+  view_component (~> 2.7.0)
   web-console (>= 3.3.0)
   webpacker
   woothee
