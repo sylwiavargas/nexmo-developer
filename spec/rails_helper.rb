@@ -65,4 +65,7 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 
   config.include SplitHelper
+
+  # Include Helpers for View Component testing
+  config.include ViewComponent::TestHelpers, type: :component
 end
