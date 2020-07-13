@@ -1,4 +1,7 @@
 en:
+  any_product: Any Product
+  any_language: Any Language
+  read_more: Read more
 
   menu:
     message-search: Message Search
@@ -83,6 +86,8 @@ en:
         get_an_api_key: Get an API key
         start_building: Start building for free
         use-cases: Use Cases
+      programming_languages_dropdown:
+        any_language: Any language
 
   code_snippets:
     copy_to_clipboard: Copy to Clipboard
