@@ -87,6 +87,8 @@ en:
         start_building: Start building for free
         use-cases: Use Cases
         voyagers: Voyagers
+        devtv: Vonage Dev TV
+        llt: Lauren Learns Things
 
   code_snippets:
     copy_to_clipboard: Copy to Clipboard

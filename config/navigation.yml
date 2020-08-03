@@ -113,7 +113,7 @@ navigation_overrides:
     setup:
       navigation_weight: 2
     configuration:
-      navigation_weight: 3  
+      navigation_weight: 3
     custom-events:
       navigation_weight: 4
     sdk-documentation:

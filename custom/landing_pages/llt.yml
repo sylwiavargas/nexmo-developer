@@ -1,0 +1,254 @@
+title: "Vonage Devs TV"
+meta_title: "Each week our developers host livestreams on Twitch showing viewers how to code and build innovative apps using our APIs and products."
+container_classes:
+  - lauren-learns-thing-page
+page:
+  - row:
+    - column:
+      - type: html
+        html:
+          content:
+            <div id="Vlt-sidenav" class="Vlt-sidenav Nxd-sidenav Vlt-sidenav--animate Vlt-sidenav--rounded">
+              <div class="Vlt-sidenav_scroll">
+                <nav class="sidenav">
+                  <ul class="Vlt-sidemenu navigation js-navigation navigation--documentation">
+                    <li class="navigation-item--show-lineup navigation-item">
+                      <span class="Vlt-sidemenu__trigger" role="link">
+                        <svg class="Vlt-gray-darker">
+                          <use xlink:href="/symbol/volta-icons.svg#Vlt-icon-video">
+                          </use>
+                        <svg>
+                        <span class="Vlt-sidemenu__label">
+                        Show Lineup
+                        </span>
+                      </span>
+                      <ul>
+                        <li class="navigation-item--overview navigation-item">
+                          <a class="Vlt-sidemenu__link" role="link" href="/devtv">
+                            Overview
+                          </a>
+                        </li>
+                        <li class="navigation-item--shows navigation-item">
+                        </li>
+                        <li class="js--collapsible navigation-item--guides navigation-item">
+                          <a class="Vlt-sidemenu__trigger" href="/devtv">
+                            <span class="Vlt-sidemenu__label">
+                            Shows
+                            </span>
+                          </a>
+                          <ul>
+                            <li class="navigation-item--lauren-learns-things navigation-item">
+                              <a class="Vlt-sidemenu__link" role="link" href="/llt">
+                                Lauren Learns Things
+                              </a>
+                            </li>
+                            <li class="navigation-item--low-code-hour navigation-item">
+                              <a class="Vlt-sidemenu__link" role="link" href="#lch">
+                                The Low-Code Hour
+                              </a>
+                            </li>
+                            <li class="navigation-item--developer-drop-in navigation-item">
+                              <a class="Vlt-sidemenu__link" role="link" href="#ddi">
+                                Developer Drop-In
+                              </a>
+                            </li>
+                            <li class="navigation-item--new-stream-who-dis navigation-item">
+                              <a class="Vlt-sidemenu__link" role="link" href="#nswd">
+                                New Stream, Who Dis?
+                              </a>
+                            </li>
+                            <li class="navigation-item--no-experience-required navigation-item">
+                              <a class="Vlt-sidemenu__link" role="link" href="#ner">
+                                No Experience Required
+                              </a>
+                            </li>
+                            <li class="navigation-item--ate-night-build navigation-item">
+                              <a class="Vlt-sidemenu__link" role="link" href="#tlnb">
+                                The Late Night Build
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="navigation-item--upcoming-programming navigation-item">
+                      <span class="Vlt-sidemenu__trigger" role="link">
+                        <svg class="Vlt-gray-darker">
+                          <use xlink:href="/symbol/volta-icons.svg#Vlt-icon-calendar-3">
+                          </use>
+                        <svg>
+                        <span class="Vlt-sidemenu__label">
+                          Upcoming Programming
+                        </span>
+                      </span>
+                      <ul>
+                        <li class="navigation-item--overview navigation-item">
+                          <a class="Vlt-sidemenu__link" role="link" href="#overview">
+                            Calendar
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="navigation-item--vod navigation-item">
+                      <span class="Vlt-sidemenu__trigger" role="link">
+                        <svg class="Vlt-gray-darker">
+                          <use xlink:href="/symbol/volta-icons.svg#Vlt-icon-small-video">
+                          </use>
+                        <svg>
+                        <span class="Vlt-sidemenu__label">
+                          Video On Demand
+                        </span>
+                      </span>
+                      <ul>
+                        <li class="navigation-item--vod navigation-item">
+                          <a class="Vlt-sidemenu__link" role="link" href="#vod">
+                            VOD
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+    - column:
+      - type: html
+        html:
+          content: |
+            <div class="Vlt-center">
+              <h1>
+                Lauren Learns Things
+              </h1>
+              <h3 class="italic">
+                Weekly Tuesday  19:00 London | 14:00 NYC | 11:00 SF
+              </h3>
+              <a id="watch-now-btn" class="Vlt-btn Vlt-btn--secondary Vlt-btn--app Vlt-btn--large Vlt-btn--larger" href="https://twitch.tv/vonagedevs" target="_blank" > < Watch now! > </a>
+            </div>
+            <div class="padding-left-56">
+              <h2 id="latest-clips" class="Vlt-title--icon">
+                Latest Clips
+              </h2>
+            </div>
+            <div class="Vlt-grid padding-left-56">
+              <div class="Vlt-col flex-grow-1">
+                <video  height="80%" muted autoplay controls loop>
+                  <source src="https://res.cloudinary.com/dsg3ucw55/video/upload/v1596458437/our5twitchstreams_iiqvib.mp4" type="video/mp4">
+                </video>
+                <h5 class="video-title">
+                  Lauren Introduces Luke Oliff and Slack Bots
+                </h5>
+                <h5 class="video-details">
+                  05.17.2020 | 2m
+                </h5>
+              </div>
+              <div class="Vlt-col">
+                <video  height="80%" muted autoplay controls loop>
+                  <source src="https://res.cloudinary.com/dsg3ucw55/video/upload/v1596458437/our5twitchstreams_iiqvib.mp4" type="video/mp4">
+                </video>
+                <h5 class="video-title">
+                  What is Glitch and why to use it.
+                </h5>
+                <h5 class="video-details">
+                  05.3.2020 | 2m
+                </h5>
+              </div>
+              <div class="Vlt-col">
+                <video  height="80%" muted autoplay controls loop>
+                  <source src="https://res.cloudinary.com/dsg3ucw55/video/upload/v1596458437/our5twitchstreams_iiqvib.mp4" type="video/mp4">
+                </video>
+                <h5 class="video-title">
+                  Using Prism Mock Server to test APIs
+                </h5>
+                <h5 class="video-details">
+                  04.21.2020 | 2m
+                </h5>
+              </div>
+            </div>
+
+            <div class="Vlt-grid padding-left-56">
+              <div class="Vlt-col flex-grow-1">
+                <h2 id="about-show" class="Vlt-title--icon">
+                  About The Show
+                </h2>
+                <p>
+                  Weekly, each Tuesday Lauren is joined by a PDX team member who is there to teach her (and the viewers) how to build an app or implement one of our APIs. They may be following along a recent blog post or working through a new demo the Developer Advocate is excited about. The app is always built from scratch and is accessible to all levels of developers, from experts to beginners!
+                </p>
+              </div>
+              <div class="Vlt-col">
+                <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1596477949/Lauren_Learns_things_1_1_uggvrj.png" alt="Lauren Learns Things">
+              </div>
+            </div>
+
+            <div class="Vlt-grid padding-left-56">
+              <div class="Vlt-col Vlt-col--1of4 flex-grow-1">
+                <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1596487146/Lauren_Lee_trojo1.jpg" alt="Lauren Learns Things">
+              </div>
+              <div class="Vlt-col Vlt-col--3of4">
+                <div class="inline-block">
+                  <h2 id="about-host" class="Vlt-title--icon inline-block">
+                    About Lauren Lee
+                  </h2>
+                  <a href="https://twitter.com/LoLoCoding" target="_blank">
+                    <i class="icon icon-twitter">
+                    </i>
+                  </a>
+                  <a href="https://github.com/laurenelee" target="_blank">
+                    <i class="icon icon-github">
+                    </i>
+                  </a>
+                </div>
+                <h3 class="italic">
+                  developer educator manager
+                </h3>
+                <p>
+                  An English teacher turned empathetic software engineer. 👩🏼‍🏫➡️👩🏼‍💻 A curious optimist with a passion for accessible creating content and helping developers level up their skills at Nexmo, the Vonage API.
+
+                  I'm community and social-justice minded and am an innovative, enthusiastic, and curious learner. I enjoy dialogue, being apart of a team, and puzzling through complex logic-based and engineering challenges.
+
+                  When I am not coding👩🏼‍💻, I am involved in community theater🎭, a mentor with Chicktech Seattle🐣, a member of an intramural ice hockey team🏒, and a certified rescue scuba diver⚓️.
+
+                  LoLoCoding.com
+                </p>
+              </div>
+            </div>
+
+      - type: text
+        text:
+          content: |
+            <style>
+              .Nxd-landing-page{
+                padding: 0;
+                max-width: none;
+              }
+              .Nxd-landing-col{
+                padding-left: 0;
+                padding-right: 0;
+              }
+              .Nxd-header-notices{
+                padding-left: 0;
+                padding-right: 0;
+              }
+
+              .inline-block{
+                display: inline-block;
+              }
+              #watch-now-btn{
+                margin-left: 35px;
+              }
+
+              .Vlt-grid > .Vlt-col{
+                flex-grow: 0;
+              }
+              .Vlt-grid > .Vlt-col ~ .Vlt-col{
+                flex-grow: 1;
+              }
+              .flex-grow-1{
+                flex-grow: 1 !important;
+              }
+              .italic{
+                font-style: italic;
+              }
+              .padding-left-56{
+                padding-left: 56px;
+              }
+            </style>

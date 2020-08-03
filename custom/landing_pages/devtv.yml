@@ -1,0 +1,270 @@
+title: "Vonage Dev TV"
+meta_title: "Each week our developers host livestreams on Twitch showing viewers how to code and build innovative apps using our APIs and products."
+container_classes:
+  - dev-tv-page
+page:
+  - row:
+    - column:
+      - type: html
+        html:
+          content:
+            <div id="Vlt-sidenav" class="Vlt-sidenav Nxd-sidenav Vlt-sidenav--animate Vlt-sidenav--rounded">
+              <div class="Vlt-sidenav_scroll">
+                <nav class="sidenav">
+                  <ul class="Vlt-sidemenu navigation js-navigation navigation--documentation">
+                    <li class="navigation-item--show-lineup navigation-item">
+                      <span class="Vlt-sidemenu__trigger" role="link">
+                        <svg class="Vlt-gray-darker">
+                          <use xlink:href="/symbol/volta-icons.svg#Vlt-icon-video">
+                          </use>
+                        <svg>
+                        <span class="Vlt-sidemenu__label">
+                        Show Lineup
+                        </span>
+                      </span>
+                      <ul>
+                        <li class="navigation-item--overview navigation-item">
+                          <a class="Vlt-sidemenu__link" role="link" href="/devtv">
+                            Overview
+                          </a>
+                        </li>
+                        <li class="navigation-item--shows navigation-item">
+                        </li>
+                        <li class="js--collapsible navigation-item--guides navigation-item">
+                          <a class="Vlt-sidemenu__trigger" href="/devtv">
+                            <span class="Vlt-sidemenu__label">
+                            Shows
+                            </span>
+                          </a>
+                          <ul>
+                            <li class="navigation-item--lauren-learns-things navigation-item">
+                              <a class="Vlt-sidemenu__link" role="link" href="/llt">
+                                Lauren Learns Things
+                              </a>
+                            </li>
+                            <li class="navigation-item--low-code-hour navigation-item">
+                              <a class="Vlt-sidemenu__link" role="link" href="#lch">
+                                The Low-Code Hour
+                              </a>
+                            </li>
+                            <li class="navigation-item--developer-drop-in navigation-item">
+                              <a class="Vlt-sidemenu__link" role="link" href="#ddi">
+                                Developer Drop-In
+                              </a>
+                            </li>
+                            <li class="navigation-item--new-stream-who-dis navigation-item">
+                              <a class="Vlt-sidemenu__link" role="link" href="#nswd">
+                                New Stream, Who Dis?
+                              </a>
+                            </li>
+                            <li class="navigation-item--no-experience-required navigation-item">
+                              <a class="Vlt-sidemenu__link" role="link" href="#ner">
+                                No Experience Required
+                              </a>
+                            </li>
+                            <li class="navigation-item--ate-night-build navigation-item">
+                              <a class="Vlt-sidemenu__link" role="link" href="#tlnb">
+                                The Late Night Build
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="navigation-item--upcoming-programming navigation-item">
+                      <span class="Vlt-sidemenu__trigger" role="link">
+                        <svg class="Vlt-gray-darker">
+                          <use xlink:href="/symbol/volta-icons.svg#Vlt-icon-calendar-3">
+                          </use>
+                        <svg>
+                        <span class="Vlt-sidemenu__label">
+                          Upcoming Programming
+                        </span>
+                      </span>
+                      <ul>
+                        <li class="navigation-item--overview navigation-item">
+                          <a class="Vlt-sidemenu__link" role="link" href="#overview">
+                            Calendar
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="navigation-item--vod navigation-item">
+                      <span class="Vlt-sidemenu__trigger" role="link">
+                        <svg class="Vlt-gray-darker">
+                          <use xlink:href="/symbol/volta-icons.svg#Vlt-icon-small-video">
+                          </use>
+                        <svg>
+                        <span class="Vlt-sidemenu__label">
+                          Video On Demand
+                        </span>
+                      </span>
+                      <ul>
+                        <li class="navigation-item--vod navigation-item">
+                          <a class="Vlt-sidemenu__link" role="link" href="#vod">
+                            VOD
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+    - column:
+      - type: html
+        html:
+          content: |
+            <div class="padding-left-56">
+              <h1 class="Vlt-title--icon inline-block" id="vonage-devs-tv">
+                Vonage Dev TV
+              </h1>
+              <a id="watch-now-btn" class="Vlt-btn Vlt-btn--primary Vlt-btn--app Vlt-btn--large Vlt-btn--larger" href="https://twitch.tv/vonagedevs" target="_blank" > < Watch now! > </a>
+            </div>
+            <div width="100%" class="black-bg Vlt-center">
+              <video  height="450px" muted autoplay controls loop>
+                <source src="https://res.cloudinary.com/dsg3ucw55/video/upload/v1596458437/our5twitchstreams_iiqvib.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="Vlt-article padding-left-56">
+              <h2 id="about-vonage-devs-tv" class="Vlt-title--icon">
+                About Vonage Dev TV
+              <h2>
+              <p>
+              Vonage Devs TV aims to entertain and inform a global network of millions of developers as they connect with the Vonage community and learn how to build the future of communications together. We deliver video content that developers can engage with both live and on demand with their peers. Take a look below for this month's lineup.
+              </p>
+            </div>
+            <div class="black-bg padding-left-56 padding-right-56">
+              <h2 id="our-weekly-lineup" class="Vlt-title--icon white-text white-bottom-border">
+                Our Weekly Lineup
+              </h2>
+
+              <div class="Vlt-grid white-bottom-border margin-bottom-20">
+                <div class="Vlt-col flex-grow-1">
+                  <h3 class="white-text Vlt-center ">Monday</h3>
+                </div>
+                <div class="Vlt-col">
+                  <h3 class="white-text Vlt-center ">Tuesday</h3>
+                </div>
+                <div class="Vlt-col">
+                  <h3 class="white-text Vlt-center ">Wednesday</h3>
+                </div>
+                <div class="Vlt-col">
+                  <h3 class="white-text Vlt-center ">Thursday</h3>
+                </div>
+                <div class="Vlt-col">
+                  <h3 class="white-text Vlt-center ">Friday</h3>
+                </div>
+              </div>
+
+              <div class="Vlt-grid">
+                <div class="Vlt-col flex-grow-1">
+                </div>
+                <div class="Vlt-col">
+                  <div class="art-link">
+                    <a class="" href="">
+                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1596477949/Lauren_Learns_things_1_1_uggvrj.png" alt="Lauren Learns Things">
+                      <h5 class="white-text Vlt-center margin-bottom-20">Lauren Learns Things</h5>
+                    </a>
+                  </div>
+                </div>
+                <div class="Vlt-col">
+                  <div class="art-link">
+                    <a class="" href="">
+                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1596477949/The_Low-Code_Hour_1_iijvbd.png" alt="The Low-Code Hour" >
+                      <h5 class="white-text Vlt-center margin-bottom-20">The Low-Code Hour</h5>
+                    </a>
+                  </div>
+                  <div class="art-link">
+                    <a class="" href="">
+                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1596477949/Developer_Drop-In_Lorna_1_2_lkqquz.png" alt="Developer Drop-In" >
+                      <h5 class="white-text Vlt-center margin-bottom-20">Devloper Drop-In</h5>
+                    </a>
+                  </div>
+                </div>
+                <div class="Vlt-col">
+                  <div class="art-link">
+                    <a class="" href="">
+                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1596477949/16-7-2020_Nahrin_4_hkywr8.png" alt="New Stream, Who Dis?" >
+                      <h5 class="white-text Vlt-center margin-bottom-20">New Stream, Who Dis?</h5>
+                    </a>
+                  </div>
+                </div>
+                <div class="Vlt-col">
+                  <div class="art-link">
+                    <a class="" href="">
+                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1596477949/No_Experience_Required_1_tlucik.png" alt="No Experience Required" >
+                      <h5 class="white-text Vlt-center margin-bottom-20">No Experience Required</h5>
+                    </a>
+                  </div>
+                  <div class="art-link">
+                    <a class="" href="">
+                      <img src="https://res.cloudinary.com/dsg3ucw55/image/upload/v1596477949/Late_Night_Build_2_jlys7x.png" alt="The Late Night Build" >
+                      <h5 class="white-text Vlt-center margin-bottom-20">The Late Night Build</h5>
+                    </a>
+                   </div>
+                </div>
+              </div>
+            </div>
+      - type: text
+        text:
+          content: |
+            <style>
+              .Nxd-landing-page{
+                padding: 0;
+                max-width: none;
+              }
+              .Nxd-landing-col{
+                padding-left: 0;
+                padding-right: 0;
+              }
+              .Nxd-header-notices{
+                padding-left: 0;
+                padding-right: 0;
+              }
+              .black-bg{
+                background-color: #131415;
+              }
+              .white-text{
+                color: #fff;
+              }
+              .white-bottom-border{
+                border-bottom: 1px solid white;
+              }
+              .inline-block{
+                display: inline-block;
+              }
+              .padding-left-56{
+                padding-left: 56px;
+              }
+              .padding-right-56{
+                padding-right: 56px;
+              }
+              #watch-now-btn{
+                margin-left: 35px;
+              }
+
+              .Vlt-grid > .Vlt-col{
+                flex-grow: 0;
+              }
+              .Vlt-grid > .Vlt-col ~ .Vlt-col{
+                flex-grow: 1;
+              }
+              .flex-grow-1{
+                flex-grow: 1 !important;
+              }
+              .art-link:hover{
+                border: 2px solid white;
+              }
+              .margin-bottom-20{
+                margin-bottom: 20px;
+              }
+            </style>
+
+
+# TODO
+# fix padding left of sidenav items
+# even out the bottom border of the weekdays
+# make the height of the black box for weekly lineup matchup up with sidenav
+# font size of the middle section
+# border on hover is messed up
