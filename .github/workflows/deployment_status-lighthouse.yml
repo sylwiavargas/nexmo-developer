@@ -6,12 +6,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - run: mkdir -p /tmp/artifacts
+      - run: mkdir -p ./tmp/artifacts
       - name: Lighthouse Audit
         uses: fabianrbz/github-action-lighthouse-heroku@master
         with:
           urls: '/, /concepts/overview, /api/verify'
-          outputDirectory: /tmp/artifacts
+          outputDirectory: ./tmp/artifacts
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HEROKU_AUTH_TOKEN: ${{ secrets.HEROKU_AUTH_TOKEN }}
@@ -19,4 +19,4 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: Lighthouse reports
-          path: /tmp/artifacts
+          path: ./tmp/artifacts
