@@ -10,7 +10,7 @@ jobs:
       - name: Lighthouse Audit
         uses: fabianrbz/github-action-lighthouse-heroku@master
         with:
-          urls: '/, /concepts/overview, /api/verify'
+          urls: '/,/concepts/overview,/api/verify'
           outputDirectory: ./tmp/artifacts
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
