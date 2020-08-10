@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - run: mkdir /tmp/artifacts
+      - run: mkdir -p /tmp/artifacts
       - name: Lighthouse Audit
         uses: fabianrbz/github-action-lighthouse-heroku@master
         with:
