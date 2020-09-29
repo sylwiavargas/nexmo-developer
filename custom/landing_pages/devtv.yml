@@ -344,7 +344,7 @@ page:
                             <i class="icon icon-github"></i>
                           </a>
                           <h5>
-                            iOS Developer Advocate
+                            Android Developer Advocate
                           </h5>
                           <p class="text-justify">
                             Igor Wojda is a passionate engineer with over a decade of software development experience. He is deeply interested in Android application architecture, Kotlin language and he is an active member of the open-source community. Igor is a conference speaker, technical proffer for ‘Kotlin In Action’ book, and author of ‘Android Development with Kotlin’ book. Igor enjoys sharing his passion for coding with other developers. Currently, he is working as Android Developer Advocate at Vonage.
@@ -839,9 +839,7 @@ page:
                             Developer Advocate
                           </h5>
                           <p class="text-justify">
-                            👩🏼‍💻, 🎨 & 🥑 shenanigans @DevRelAvocados and Vonage.
-                            <br>
-                            I spend most of my time wrangling Node-RED into doing my bidding, creating resources for the community.
+                            Julia is a Developer Advocate for Vonage focusing on low-code technologies and integrations. Maker and breaker of things, explorer of yet another builder tool. Forever challenging the barriers to entry of tech, she is passionate about learning and teaching, creating resources for the community.
                           </p>
                           </br>
                           <a class="Vlt-purple" href="https://developeravocados.net/">
@@ -1412,6 +1410,9 @@ page:
                         <h5>
                           Developer Advocate
                         </h5>
+                        <p class="text-justify">
+                          Julia is a Developer Advocate for Vonage focusing on low-code technologies and integrations. Maker and breaker of things, explorer of yet another builder tool. Forever challenging the barriers to entry of tech, she is passionate about learning and teaching, creating resources for the community.
+                        </p>
                     </div>
                   </div>
                 </div>
@@ -1706,6 +1707,9 @@ page:
                         <h5>
                           Developer Advocate
                         </h5>
+                        <p class="text-justify">
+                          Julia is a Developer Advocate for Vonage focusing on low-code technologies and integrations. Maker and breaker of things, explorer of yet another builder tool. Forever challenging the barriers to entry of tech, she is passionate about learning and teaching, creating resources for the community.
+                        </p>
                     </div>
                   </div>
                 </div>
