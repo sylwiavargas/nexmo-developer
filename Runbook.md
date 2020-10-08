@@ -4,7 +4,7 @@ Nexmo Developer is a simple Rails application with a mounted Sinatra app that ha
 
 # Deployment
 
-NDP is hosted in Heroku and is automatically deployed every time a branch is merged into master via a Github integration.
+NDP is hosted in Heroku and is automatically deployed every time a branch is merged into master via a GitHub integration.
 In case you want to force a deploy, you can always deploy NDP from [Heroku's dashboard](https://dashboard.heroku.com/apps/nexmo-developer).
 
 ## Required Resources
@@ -23,7 +23,7 @@ We use [Logz.io](https://logz.io/) as a logging solution with a 3Gb daily volume
 ## Error Monitoring and Reporting
 
 We use [Bugsnag](https://www.bugsnag.com/) for monitoring errors both on the Backend and Frontend splitted into different Projects.
-Bare in mind that most of the errors are logged under `Markdown#show` so it might take a while to find a specific error.
+Bear in mind that most of the errors are logged under `Markdown#show` so it might take a while to find a specific error.
 
 ## Health checks
 
