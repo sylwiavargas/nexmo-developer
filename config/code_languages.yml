@@ -117,6 +117,14 @@ languages:
     icon: android
     dependencies: []
 
+  go:
+    weight: 12
+    label: Go
+    lexer: go
+    dependencies:
+      - "vonage"
+    run_command: 'go run {filename}'
+
 platforms:
   ios:
     languages:

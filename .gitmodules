@@ -25,3 +25,6 @@
 [submodule ".repos/vonage/vonage-curl-code-snippets"]
 	path = .repos/vonage/vonage-curl-code-snippets
 	url = https://github.com/Vonage/vonage-curl-code-snippets.git
+[submodule ".repos/vonage/vonage-go-code-snippets"]
+	path = .repos/vonage/vonage-go-code-snippets
+	url = https://github.com/Vonage/vonage-go-code-snippets.git
