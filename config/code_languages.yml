@@ -121,8 +121,9 @@ languages:
     weight: 12
     label: Go
     lexer: go
+    icon: go
     dependencies:
-      - "vonage"
+      - "vonage-go-sdk"
     run_command: 'go run {filename}'
 
 platforms:
