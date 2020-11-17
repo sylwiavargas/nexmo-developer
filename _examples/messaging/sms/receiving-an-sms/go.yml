@@ -1,6 +1,4 @@
 ---
-title: Go
-language: go
 code:
     source: .repos/vonage/vonage-go-code-snippets/sms/receive-sms.go
     from_line: 8
@@ -10,4 +8,3 @@ client:
     from_line: 1
     to_line: 6   
 file_name: receive-sms.go
-run_command: 'go run receive-sms.go'
