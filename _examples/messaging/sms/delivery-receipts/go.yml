@@ -1,0 +1,6 @@
+---
+code:
+    source: .repos/vonage/vonage-go-code-snippets/sms/receive-delivery-receipt.go
+    from_line: 10
+    to_line: 20
+file_name: receive-delivery-receipt.go

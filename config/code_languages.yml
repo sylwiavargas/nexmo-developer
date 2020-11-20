@@ -122,8 +122,6 @@ languages:
     label: Go
     lexer: go
     icon: go
-    dependencies:
-      - "vonage-go-sdk"
     run_command: 'go run {filename}'
 
 platforms:
