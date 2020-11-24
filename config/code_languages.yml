@@ -122,6 +122,7 @@ languages:
     label: Go
     lexer: go
     icon: go
+    unindent: true
     run_command: 'go run {filename}'
 
 platforms:
