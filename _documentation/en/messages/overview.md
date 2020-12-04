@@ -42,14 +42,14 @@ Channel | Outbound Text | Outbound Image | Outbound Audio | Outbound Video | Out
 SMS | ✅ | n/a | n/a | n/a | n/a | n/a
 MMS | ✅ | ✅ | n/a | n/a | n/a | n/a
 Viber Service Messages | ✅ | ✅ | n/a | n/a | n/a | ✅
-Facebook Messenger | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
+Facebook Messenger | ✅ | ✅ | ➖ | ➖ | ➖ | ➖
 WhatsApp | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 
 Channel | Inbound Text | Inbound Image | Inbound Audio | Inbound Video | Inbound File | Inbound Location
 :--- | :---: | :---: | :---: | :---: | :---: | :---:
 MMS | ✅ | ✅ | n/a | n/a | n/a | n/a
 Viber Service Messages | ✅ | n/a | n/a | n/a | n/a | n/a
-Facebook Messenger | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
+Facebook Messenger | ✅ | ✅ | ➖ | ➖ | ➖ | ➖
 WhatsApp | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 
 Limited support is also provided for [custom objects](/messages/concepts/custom-objects):
@@ -59,14 +59,16 @@ Channel | Outbound Button | Outbound Location | Outbound Contact
 SMS | n/a | n/a | n/a
 MMS | n/a | n/a | n/a
 Viber Service Messages | ✅ | n/a | n/a
-Facebook Messenger | ✅ | n/a | n/a
+Facebook Messenger | ➖ | n/a | n/a
 WhatsApp | ✅ | ✅ | ✅
 
 **Key:**
 
 * ✅ = Supported.
 * ❌ = Supported by the channel, but not by Vonage.
+* ➖ = This feature is generally available, however due to privacy regulations this feature is [limited](https://developers.facebook.com/docs/messenger-platform/europe-updates#affected) in Europe.
 * n/a = Not supported by the channel.
+
 
 ## External Accounts API
 

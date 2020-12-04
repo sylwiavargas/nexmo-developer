@@ -7,6 +7,8 @@ meta_title: Send a message template with Facebook Messenger
 
 In this code snippet you learn how to send a Facebook message template using a [custom object](/messages/concepts/custom-objects) with the Messages API.
 
+> NOTE: This feature is generally available, however due to privacy regulations this feature may be [limited in Europe](https://developers.facebook.com/docs/messenger-platform/europe-updates#affected)
+
 ## Example
 
 Ensure the following variables are set to your required values using any convenient method:

@@ -9,6 +9,8 @@ In this code snippet you learn how to send a video message through Facebook Mess
 
 For a step-by-step guide to this topic, you can read our tutorial [Sending Facebook Messenger messages with the Messages API](/tutorials/sending-facebook-messenger-messages-with-messages-api).
 
+> NOTE: This feature is generally available, however due to privacy regulations this feature may be [limited in Europe](https://developers.facebook.com/docs/messenger-platform/europe-updates#affected)
+
 ## Example
 
 Ensure the following variables are set to your required values using any convenient method:
