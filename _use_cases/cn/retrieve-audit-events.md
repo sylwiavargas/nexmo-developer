@@ -1,13 +1,11 @@
 ---
 title:  Retrieve audit events
-
 products: audit
-
 description:  "You can retrieve filtered lists of audit events. Audit events log activity in a Vonage account."
-
 languages:
   - Curl
-*** ** * ** ***
+---
+
 Retrieve audit events
 =====================
 You can retrieve a record of all audit events associated with your Vonage account. You can also filter this list based on dates, keyword, user and event type.

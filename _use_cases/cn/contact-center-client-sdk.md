@@ -1,13 +1,11 @@
 ---
 title:  Contact Center
-
 products: client-sdk
-
 description:  How to build your own contact center application.
-
 languages:
     - Node
-*** ** * ** ***
+---
+
 Build Your Own Contact Center
 =============================
 In this use case, you’ll learn how to build an application with contact center features.

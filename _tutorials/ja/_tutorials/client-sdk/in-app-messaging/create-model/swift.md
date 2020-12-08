@@ -34,7 +34,7 @@ struct User {
 ```swift
 struct User {
     ...
-````
+
 static let Alice = User(name: "Alice",
                         jwt:"ALICE_JWT",
                         chatPartnerName: "Bob")
@@ -43,4 +43,3 @@ static let Bob = User(name: "Bob",
                       chatPartnerName: "Alice")
 }
 ```
-````

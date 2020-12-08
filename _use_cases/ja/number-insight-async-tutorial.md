@@ -1,13 +1,11 @@
 ---
 title:  Number Insight Advanced API
-
 products: number-insight
-
 description:  番号の有効性とリーチャビリティに関する包括的な情報にアクセスする方法について説明します。
-
 languages:
   - Node
-*** ** * ** ***
+---
+
 Number Insight Advanced API
 ===========================
 Number Insight APIは、世界中の電話番号に関するリアルタイムの情報を提供します。Basic、Standard、Advancedの3つのレベルがあります。

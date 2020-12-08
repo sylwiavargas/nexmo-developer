@@ -1,13 +1,11 @@
 ---
 title:  プライベート音声通信
-
 products: voice/voice-api
-
 description:  ユーザー同士を接続してプライベート音声通話を行うことで、ユーザーの番号のプライバシーを保護します。
-
 languages:
   - Node
-*** ** * ** ***
+---
+
 プライベート音声通信
 ==========
 このユースケースでは、[プライベート音声通話ユースケース](https://www.nexmo.com/use-cases/private-voice-communication/)に記載されているアイデアを実装する方法を示します。Vonageの[Node Server SDK](https://github.com/Nexmo/nexmo-node)を使用して音声プロキシを構築し、仮想番号を使用して参加者の実際の電話番号を隠す方法について説明します。完全なソースコードは[GitHubリポジトリ](https://github.com/Nexmo/node-voice-proxy)でも入手可能です。

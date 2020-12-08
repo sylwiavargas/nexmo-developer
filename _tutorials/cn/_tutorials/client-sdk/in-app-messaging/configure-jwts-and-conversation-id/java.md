@@ -16,16 +16,16 @@ Open `Config.kt` file and replace placeholders with real values:
 package com.vonage.tutorial.messaging
 
 public class Config {
-````
+
 public static String CONVERSATION_ID = ""; // TODO: set conversation Id
-````
+
     public static User getAlice() {
         return new User(
                 "Alice",
                 "" // TODO: "set Alice JWT token"
         );
     }
-````
+
 public static User getBob() {
     return new User(
             "Bob",
@@ -34,6 +34,6 @@ public static User getBob() {
 }
 }
 ```
-````
+
 Notice that these constants and values are hardcoded to store the properties of users. This makes it easier to use these values later in this tutorial.
 

@@ -1,15 +1,13 @@
 ---
 title:  Receive product information automatically via Facebook Messenger
-
 products: messages
-
 description:  This tutorial looks at a use case where the user receives relevant product information automatically via Facebook Messenger, without the need for support personnel.
-
 languages:
   - Python
-*** ** * ** ***
-Receive product information automatically via Facebook Messenger
-================================================================
+---
+
+# Receive product information automatically via Facebook Messenger
+
 This tutorial shows you how to provide a user with relevant product information automatically via Facebook Messenger.
 In this use case the user greets the company via the company's Facebook Page. A message is automatically sent back to the user. Using keyword matching the user can receive tailored product and service information.
 

@@ -1,13 +1,11 @@
 ---
 title:  Digital Marketplace
-
 products: client-sdk
-
 description:  How to build your own digital marketplace application.
-
 languages:
     - Node
-*** ** * ** ***
+---
+
 Digital Marketplace
 ===================
 In this use case, you’ll learn how to build a digital marketplace. [View it in action here](https://green-crowberry.glitch.me/).

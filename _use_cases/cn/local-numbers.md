@@ -1,13 +1,11 @@
 ---
 title:  Local Numbers
-
 products: voice/voice-api
-
 description:  "Replace your toll-free numbers (e.g. 800, 0800) with local geographical numbers that allow you to provide a better customer service. Users can make cheaper calls and you can offer location-sensitive information when they contact you."
-
 languages:
   - Ruby
-*** ** * ** ***
+---
+
 Local Numbers for Voice Calls
 =============================
 While toll-free numbers can be expensive, they're also one of the least personal ways to provide a customer with a way to reach you. So with that in mind, we're going to replace your expensive toll-free number with multiple localized regional numbers. This will allow you to give your customers a friendly local number to dial while saving you on expensive toll-free number rental costs.

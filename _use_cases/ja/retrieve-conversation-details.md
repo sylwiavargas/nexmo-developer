@@ -1,14 +1,12 @@
 ---
 title:  進行中の音声通話の会話の詳細を取得する
-
 products: conversation
-
 description:  「進行中の音声通話の会話オブジェクトの詳細を取得する」
-
 languages:
   - Curl
   - Python
-*** ** * ** ***
+---
+
 会話の詳細を取得する
 ==========
 Conversation APIを使用して、音声通話の会話オブジェクトの詳細を取得できます。

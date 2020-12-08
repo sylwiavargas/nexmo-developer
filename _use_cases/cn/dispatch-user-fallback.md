@@ -1,13 +1,11 @@
 ---
 title:  Multi-user, multi-channel failover using Dispatch API
-
 products: dispatch
-
 description:  This tutorial describes a use case where a an attempt is made to send a message to a user on their designated channels. If the user does not read the message the process is repeated with the next user on the list. This use case uses the Dispatch API as their is multiple designated channels per user, with failover.
-
 languages:
   - Python
-*** ** * ** ***
+---
+
 Multi-user, multi-channel failover using Dispatch API
 =========================================================
 This tutorial shows you how to send a message to a list of users with automatic failover.

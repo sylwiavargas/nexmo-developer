@@ -1,13 +1,11 @@
 ---
 title:  Broadcast Voice-based Critical Alerts
-
 products: voice/voice-api
-
 description:  In this tutorial, you will learn how to contact a list of people by phone, convey a message, and see who confirmed that they had received the message. These voice-based critical alerts are more persistent than a text message, making your message more likely to be noticed. Additionally, with the recipient confirmation, you can be sure that your message made it through.
-
 languages:
   - PHP
-*** ** * ** ***
+---
+
 Broadcast Voice-based Critical Alerts
 =======================================
 A persistently ringing phone is harder to miss than a text message or push alert, so when you need to ensure that [critical  alerts](https://www.nexmo.com/use-cases/voice-based-critical-alerts) make it through to the right person a phone call is one of the best options available.

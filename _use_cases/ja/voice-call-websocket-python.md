@@ -1,13 +1,11 @@
 ---
 title:  PythonでWebSocketに通話を発信する
-
 products: voice/voice-api
-
 description:  このチュートリアルでは、WebSocketエンドポイントに通話を接続して通話音声を発信者にエコーバックさせる方法について説明します。
-
 languages:
   - Python
-*** ** * ** ***
+---
+
 PythonでWebSocketに通話を発信する
 ========================
 音声用APIを使用すると、通話を[WebSocket](/voice/voice-api/guides/websockets)に接続し、WebSocketプロトコルを経由して配信される通話音声の双方向ストリームをリアルタイムで提供できます。これにより、通話音声を処理して、感情分析、リアルタイムの文字起こし、人工知能を使用した意思決定などのタスクを実行できます。

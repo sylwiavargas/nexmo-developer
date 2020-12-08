@@ -1,13 +1,11 @@
 ---
 title:  Fraud Scoring and Phone Number Verification
-
 products: number-insight
-
 description:  You can use the Number Insight Advanced and Verify APIs together to build your own fraud detection system. With this approach, you can protect your organization against fraudulent transactions while making the process frictionless for most customers.
-
 languages:
   - Node
-*** ** * ** ***
+---
+
 Fraud Scoring and Phone Number Verification
 ===========================================
 You can use the [Number Insight Advanced](/number-insight) and [Verify API](/verify/api-reference/)s together to build your own fraud detection system. With this approach, you can protect your organization against fraudulent transactions while making the process frictionless for most customers.

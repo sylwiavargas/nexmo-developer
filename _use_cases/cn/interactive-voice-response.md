@@ -1,13 +1,11 @@
 ---
 title:  Interactive Voice Response
-
 products: voice/voice-api
-
 description:  Build an automated phone system for users to input information with the keypad and hear a spoken response
-
 languages:
   - PHP
-*** ** * ** ***
+---
+
 Interactive Voice Response
 ==========================
 For users with a simple enquiry, make it easy and quick for them by offering an Interactive Voice Response (IVR) service. This tutorial will walk you through building an application to do exactly that with simple text-to-speech (TTS) prompts and keypad input.

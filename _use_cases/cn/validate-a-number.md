@@ -1,13 +1,11 @@
 ---
 title:  Validate a number
-
 products: number-insight
-
 description:  Use the Number Insight and Developer API from Ruby code to validate, sanitize and determine the cost to call or message a number.
-
 languages:
   - Ruby
-*** ** * ** ***
+---
+
 Validate a number
 =================
 The Number Insight API helps you validate numbers that customers provide to prevent fraud and ensure that you can contact that customer again in the future. It also provides you with other useful information such as how to format the number and whether the number is a mobile or landline.

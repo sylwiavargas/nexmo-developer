@@ -1,13 +1,11 @@
 ---
 title:  Mobile app invites
-
 products: messaging/sms
-
 description:  Link your customers to your app with SMS
-
 languages:
   - Ruby
-*** ** * ** ***
+---
+
 Mobile app invites
 ==================
 With the number of apps on Android and iOS rising it is important for people to easily find your apps, both in the stores and on the Web.

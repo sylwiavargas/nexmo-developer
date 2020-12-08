@@ -1,13 +1,11 @@
 ---
 title:  録音した通話をAmazon Transcribeで書き起こす
-
 products: voice/voice-api
-
 description:  「このチュートリアルでは、Amazon Transcribe APIを使用して、Vonage音声APIで録音した電話での会話を書き起こす方法を紹介しています」
-
 languages:
   - Node
-*** ** * ** ***
+---
+
 録音した通話をAmazon Transcribeで書き起こす
 ==============================
 このチュートリアルでは、音声APIコールを録音し、それをAmazon Transcribe APIを使用して書き起こす方法を学びます。

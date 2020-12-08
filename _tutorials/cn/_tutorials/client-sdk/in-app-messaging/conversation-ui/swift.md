@@ -59,12 +59,12 @@ class ChatViewController: UIViewController {
             inputField.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: -20)
         ])   
     }
-````
+
 override func viewWillAppear(_ animated: Bool) {
     NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWasShown),
      name: UIResponder.keyboardDidShowNotification, object: nil)
 }
-````
+
     @objc func keyboardWasShown(notification: NSNotification) {
         if let kbSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect)?.size {
             view.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: kbSize.height - 20, right: 0)
@@ -97,12 +97,12 @@ class ChatViewController: UIViewController {
     ...
     let client = NXMClient.shared
     let user: User
-````
+
 init(user: User) {
     self.user = user
     super.init(nibName: nil, bundle: nil)
 }
-````
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -122,20 +122,20 @@ This will also creates a logout button in the navigation bar, add the `logout` f
 ```swift
 class ChatViewController: UIViewController {
     ...
-````
+
  @objc func logout() {
     client.logout()
     dismiss(animated: true, completion: nil)
 }
 ```
-````
+
 Now you are ready to present the chat interface along with the user information. To do this you will need to edit the `NXMClientDelegate` extension in the `ViewController.swift` file:
 
 ```swift
 extension ViewController: NXMClientDelegate {
     func client(_ client: NXMClient, didChange status: NXMConnectionStatus, reason: NXMConnectionStatusReason) {
         guard let user = self.user else { return }
-````
+
     switch status {
     case .connected:
         setStatusLabel("Connected")
@@ -148,7 +148,7 @@ extension ViewController: NXMClientDelegate {
 ...
 }
 ```
-````
+
 If the user connects successfully a `ChatViewController` will be presented with the user data needed.
 
 Build and Run

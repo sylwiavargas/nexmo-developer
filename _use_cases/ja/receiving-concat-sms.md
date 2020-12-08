@@ -1,13 +1,11 @@
 ---
 title:  連結SMSを受信する
-
 products: messaging/sms
-
 description:  受信SMSが、単一のSMSで許可されている最大長を超えた場合、受信SMSは分割されます。これらの分割されたSMSを再構成して完全なメッセージにするのは、自力で行わなければなりません。このチュートリアルでは、その方法を説明します。
-
 languages:
   - Node
-*** ** * ** ***
+---
+
 連結SMSを受信する
 ==========
 [特定の長さを超える](/messaging/sms/guides/concatenation-and-encoding)SMSメッセージは、2つ以上のより短いメッセージに分割され、複数のSMSとして送信されます。

@@ -1,13 +1,11 @@
 ---
 title:  Receiving Concatenated SMS
-
 products: messaging/sms
-
 description:  If an inbound SMS exceeds the maximum length allowed for a single SMS, it is split into parts. It is then up to you to reassemble those parts to show the full message. This tutorial shows you how.
-
 languages:
   - Node
-*** ** * ** ***
+---
+
 Receiving Concatenated SMS
 ==========================
 SMS messages that [exceed a certain length](/messaging/sms/guides/concatenation-and-encoding) are split into two or more shorter messages and sent as multiple SMS.

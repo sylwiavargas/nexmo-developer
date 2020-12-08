@@ -1,7 +1,6 @@
 ---
 title:  Building the user model
 description:  In this step you will build the user model struct.
-
 ---
 
 Building the user model
@@ -34,7 +33,7 @@ To make things easier for later on add some static properties on the `User` type
 ```swift
 struct User {
     ...
-````
+
 static let Alice = User(name: "Alice",
                         jwt:"ALICE_JWT",
                         chatPartnerName: "Bob")
@@ -43,4 +42,3 @@ static let Bob = User(name: "Bob",
                       chatPartnerName: "Alice")
 }
 ```
-````

@@ -1,13 +1,11 @@
 ---
 title:  Subaccounts APIを使用する
-
 products: account/subaccounts
-
 description:  このトピックでは、Subaccounts APIの使用を開始する方法のケーススタディを紹介します。
-
 languages:
   - Curl
-*** ** * ** ***
+---
+
 Subaccounts APIを使用する
 ====================
 概要

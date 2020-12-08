@@ -1,13 +1,11 @@
 ---
 title:  Voice Bot
-
 products: voice/voice-api
-
 description:  "This tutorial shows you how to use Automatic Speech Recognition to create a voice bot/interactive voice assistant application."
-
 languages:
   - Node
-*** ** * ** ***
+---
+
 Voice Bot / Interactive Voice Assistant
 =======================================
 In this tutorial, you will create a simple bot answering an inbound phone call. The bot will ask for your location and share your actual weather conditions in response. You will implement this using the [express](https://expressjs.com/) web application framework, [Weatherstack](https://weatherstack.com/) API and Vonage Automatic Speech Recognition (ASR) feature.

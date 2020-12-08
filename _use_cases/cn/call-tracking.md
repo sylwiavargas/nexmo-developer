@@ -1,13 +1,11 @@
 ---
 title:  Call tracking
-
 products: voice/voice-api
-
 description:  Keep track of which campaigns are working well by using different numbers for each one and tracking the incoming calls. This tutorial shows you how to handle incoming calls, connect them to another number, and track the phone numbers that called each of your Vonage numbers.
-
 languages:
   - Node
-*** ** * ** ***
+---
+
 Track Usage Across Your Vonage Numbers
 ======================================
 Gain insight into the effectiveness of your customer communications by keeping track of the calls received by your Vonage numbers. By registering a different number for each of your marketing campaigns, you can see which one performs the best and use that information to improve your future marketing efforts.

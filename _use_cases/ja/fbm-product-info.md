@@ -1,13 +1,11 @@
 ---
 title:  Facebook Messangerを介した製品情報の自動受信
-
 products: messages
-
 description:  このチュートリアルでは、ユーザーがFacebook Messangerを介して、サポート要員を必要とせずに、関連する製品情報を自動的に受け取るユースケースを見ていきます。
-
 languages:
   - Python
-*** ** * ** ***
+---
+
 Facebook Messangerを介した製品情報の自動受信
 ===============================
 このチュートリアルでは、ユーザーにFacebook Messangerを介して関連する製品情報を自動的に提供する方法について説明します。

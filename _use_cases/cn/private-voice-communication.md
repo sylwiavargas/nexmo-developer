@@ -1,13 +1,11 @@
 ---
 title:  Private voice communication
-
 products: voice/voice-api
-
 description:  Protect user's number privacy by connecting users together for private voice communication.
-
 languages:
   - Node
-*** ** * ** ***
+---
+
 Private voice communication
 ===========================
 This use case shows you how to implement the idea described in [Private Voice Communication use case](https://www.nexmo.com/use-cases/private-voice-communication/). It teaches you how to build a voice proxy using Vonage's [Node Server SDK](https://github.com/Nexmo/nexmo-node), using virtual numbers to hide the real phone numbers of the participants. Full source code is also available in our [GitHub repo](https://github.com/Nexmo/node-voice-proxy).

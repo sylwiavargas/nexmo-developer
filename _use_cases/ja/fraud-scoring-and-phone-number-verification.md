@@ -1,13 +1,11 @@
 ---
 title:  不正スコアリングと電話番号の検証
-
 products: number-insight
-
 description:  Number Insight AdvancedとVerify APIを併用して、独自の不正検知システムを構築できます。この手法で、不正取引から組織を守りつつ、多くのお客様にとって摩擦のない処理を行うことができます。
-
 languages:
   - Node
-*** ** * ** ***
+---
+
 不正スコアリングと電話番号の検証
 ================
 [Number Insight Advanced](/number-insight)と[Verify API](/verify/api-reference/)を併用して、独自の不正検知システムを構築できます。この手法で、不正取引から組織を守りつつ、多くのお客様にとって摩擦のない処理を行うことができます。

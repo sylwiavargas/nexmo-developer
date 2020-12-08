@@ -21,9 +21,9 @@ data class User(
 )
 
 object Config {
-````
+
 const val CONVERSATION_ID: String = "" // TODO: set conversation Id
-````
+
     val alice = User(
         "Alice",
         "ALICE_TOKEN" // TODO: "set Alice's JWT token"

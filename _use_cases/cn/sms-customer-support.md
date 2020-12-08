@@ -1,13 +1,11 @@
 ---
 title:  SMS Customer Support
-
 products: messaging/sms
-
 description:  Programmable SMS is not just useful for one way notifications. When you combine outbound notifications with inbound messages you create chat-like interactions between your company and your customers.
-
 languages:
   - Ruby
-*** ** * ** ***
+---
+
 SMS Customer Support
 ====================
 The general availability of SMS makes it a versatile solution for customer support. Phone numbers can be printed, read out, and put on websites, allowing anyone online or offline to engage with your business.

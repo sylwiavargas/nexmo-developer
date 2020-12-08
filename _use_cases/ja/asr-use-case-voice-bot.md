@@ -1,13 +1,11 @@
 ---
 title:  音声ボット
-
 products: voice/voice-api
-
 description:  「このチュートリアルでは、自動音声認識を使用して音声ボット/インタラクティブ音声アシスタントアプリケーションを作成する方法を説明します。」
-
 languages:
   - Node
-*** ** * ** ***
+---
+
 音声ボット/対話型音声アシスタント
 =================
 このチュートリアルでは、着信コールに応答する簡単なボットを作成します。ボットはあなたの現在地を尋ね、それに応じて実際の気象条件を共有します。これは、[Express](https://expressjs.com/) Webアプリケーションフレームワーク、[Weatherstack](https://weatherstack.com/) API、Vonage自動音声認識（Vonage Automatic Speech Recognition：ASR）機能を使用して実装します。

@@ -1,13 +1,11 @@
 ---
 title:  Real-time data feed into multiple channels using Messages API
-
 products: messages
-
 description:  This tutorial describes a use case where the user receives real-time data into their channel. Channels supported are Facebook Messenger, WhatsApp, Viber and SMS.
-
 languages:
   - Python
-*** ** * ** ***
+---
+
 Real-time data feed into multiple channels using Messages API
 ===============================================================
 This tutorial shows you how to feed data into multiple channels in real-time using the Messages API. This tutorial demonstrates sending data into all supported channels. Information on testing all channels is provided. If you are interested in testing using Facebook Messenger, it is recommended you work through [this tutorial](/tutorials/fbm-product-info) first, as that tutorial contains lots of Facebook specific information. To test WhatsApp and Viber you will need business accounts with those providers.

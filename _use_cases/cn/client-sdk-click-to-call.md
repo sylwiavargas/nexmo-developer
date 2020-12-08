@@ -1,13 +1,11 @@
 ---
 title:  Click to Call
-
 products: client-sdk
-
 description:  Learn how to enable your customers to call you directly from your website.
-
 languages:
   - Node
-*** ** * ** ***
+---
+
 Let Customers Call You From Your Website
 ========================================
 To offer the best service to your customers, you want them to be able to get hold of you quickly and conveniently using methods of communication they are comfortable and familiar with. Rather than make them search your "Contact Us" page for your phone number, why not have a button on your website that will place the call for them?

@@ -59,12 +59,12 @@ class ChatViewController: UIViewController {
             inputField.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: -20)
         ])   
     }
-````
+
 override func viewWillAppear(_ animated: Bool) {
     NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWasShown),
      name: UIResponder.keyboardDidShowNotification, object: nil)
 }
-````
+
     @objc func keyboardWasShown(notification: NSNotification) {
         if let kbSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect)?.size {
             view.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: kbSize.height - 20, right: 0)
@@ -97,12 +97,12 @@ class ChatViewController: UIViewController {
     ...
     let client = NXMClient.shared
     let user: User
-````
+
 init(user: User) {
     self.user = user
     super.init(nibName: nil, bundle: nil)
 }
-````
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -122,20 +122,20 @@ title = "Conversation with (user.chatPartnerName)"
 ```swift
 class ChatViewController: UIViewController {
     ...
-````
+
  @objc func logout() {
     client.logout()
     dismiss(animated: true, completion: nil)
 }
 ```
-````
+
 これで、チャットインターフェースをユーザー情報とともに提示する準備ができました。これを行うには、`ViewController.swift`ファイル内の`NXMClientDelegate`拡張子を編集する必要があります：
 
 ```swift
 extension ViewController: NXMClientDelegate {
     func client(_ client: NXMClient, didChange status: NXMConnectionStatus, reason: NXMConnectionStatusReason) {
         guard let user = self.user else { return }
-````
+
     switch status {
     case .connected:
         setStatusLabel("Connected")
@@ -148,7 +148,7 @@ extension ViewController: NXMClientDelegate {
 ...
 }
 ```
-````
+
 ユーザーが正常に接続すると、必要なユーザーデータが`ChatViewController`に表示されます。
 
 ビルドして実行

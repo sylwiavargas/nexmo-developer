@@ -1,13 +1,11 @@
 ---
 title:  Order support system
-
 products: client-sdk
-
 description:  How to build a product order confirmation and support system with the Vonage Client SDK and Sendinblue.
-
 languages:
     - Node
-*** ** * ** ***
+---
+
 Order support system
 ====================
 Before you begin

@@ -1,13 +1,11 @@
 ---
 title:  モバイルアプリへの招待
-
 products: messaging/sms
-
 description:  お客様とアプリをSMSでリンクする
-
 languages:
   - Ruby
-*** ** * ** ***
+---
+
 モバイルアプリへの招待
 ===========
 AndroidやiOS向けのアプリの数が増加する中、ストアでもWebでも自社のアプリが簡単に見つかるということが重要です。

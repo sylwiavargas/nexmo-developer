@@ -1,14 +1,12 @@
 ---
 title:  Retrieve Conversation details for an in-progress voice call
-
 products: conversation
-
 description:  "Retrieve details of a Conversation object for an in-progress voice call"
-
 languages:
   - Curl
   - Python
-*** ** * ** ***
+---
+
 Retrieve Conversation details
 =============================
 You can retrieve the details of a Conversation object for a voice call using the Conversation API.

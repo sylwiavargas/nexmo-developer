@@ -1,13 +1,11 @@
 ---
 title:  Using the Subaccounts API
-
 products: account/subaccounts
-
 description:  This topic presents a case study that shows you how to get started with the Subaccounts API.
-
 languages:
   - Curl
-*** ** * ** ***
+---
+
 Using the Subaccounts API
 =========================
 概述

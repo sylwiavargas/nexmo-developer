@@ -1,13 +1,11 @@
 ---
 title:  注文サポートシステム
-
 products: client-sdk
-
 description:  VonageクライアントSDKとSendinblueを使用して、製品の注文確認とサポートシステムを構築する方法
-
 languages:
     - Node
-*** ** * ** ***
+---
+
 注文サポートシステム
 ==========
 始める前に

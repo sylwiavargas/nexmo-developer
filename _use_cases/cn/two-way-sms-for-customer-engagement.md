@@ -1,13 +1,11 @@
 ---
 title:  双向短信支持客户互动
-
 products: messaging/sms
-
 description:  Programmable SMS is not just useful for one way notifications. When you combine outbound notifications with inbound messages you create chat-like interactions between your company and your customers.
-
 languages:
   - Ruby
-*** ** * ** ***
+---
+
 双向短信支持客户互动
 ==========
 Programmable SMS is not just useful for one way notifications. When you combine outbound notifications with inbound messages you create chat-like interactions between your company and your customers.

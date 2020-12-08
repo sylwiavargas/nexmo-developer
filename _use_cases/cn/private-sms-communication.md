@@ -1,13 +1,11 @@
 ---
 title:  Private SMS communication
-
 products: messaging/sms
-
 description:  This tutorial shows you how to faciliate SMS communication between two parties without revealing either one's real phone number to the other.
-
 languages:
   - Node
-*** ** * ** ***
+---
+
 Private SMS communication
 =========================
 Sometimes you want two parties to exchange SMS without revealing their actual phone numbers.
