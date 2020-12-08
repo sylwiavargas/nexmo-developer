@@ -8,6 +8,6 @@ client:
     from_line: 18
     to_line: 19
 dependencies:
-  - github.com/Vonage/vonage-go-sdk
+  - github.com/vonage/vonage-go-sdk
 file_name: send-sms.go
 
