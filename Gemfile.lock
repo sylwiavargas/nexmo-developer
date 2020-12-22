@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:Nexmo/station.git
+  remote: https://github.com/Nexmo/station.git
   revision: e617cbd607b11a480f1e57859ee61d87afb195ff
   branch: published-only
   specs:
