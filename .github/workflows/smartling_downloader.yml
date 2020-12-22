@@ -64,8 +64,6 @@ jobs:
         gem install --no-document bundler
         bundle config path vendor/bundle
         bundle install --jobs 4 --retry 3
-      with:
-        token: ${{ secrets.GH_ADMIN_TOKEN }}
     - name: Run rake tasks
       env:
         SMARTLING_USER_ID: ${{ secrets.SMARTLING_USER_ID }}
