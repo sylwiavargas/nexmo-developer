@@ -1,0 +1,256 @@
+title: "Vonage Client SDK"
+meta_title: "Vonage Client SDK allows you to build Programmable Conversation applications."
+
+page:
+- row:
+    - column: 
+      - type: header
+        header:
+          title: 
+            text: "Vonage Client SDK"
+            align: center
+          subtitle:
+            text: "Build multi-platform applications with contextual communications using Client SDK and Conversation API."
+            align: center
+            type: large
+- row:
+  - column:
+    - type: structured_text
+      structured_text:
+        header: ""
+        text:
+          - content: |
+              The Client SDK enables you to build complete applications that feature two-way voice and messaging communications.
+              The [Conversation API](/conversation/overview) is used to build out the backend of your Programmable Conversation application. The backend manages users, authentication and the creation of the [Conversations](/conversation/concepts/conversation).
+            type: large
+- row:
+  - width: 1
+    column:
+      - type: html
+        html:
+          content: |
+              <a class="Vlt-card Vlt-card--clickable" Vlt-card--scrollable style="height: 330px;" href="/client-sdk/in-app-messaging/overview">
+                <div class="Vlt-card__content">
+                  <svg class="Vlt-icon Vlt-icon--larger Vlt-purple-dark"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-chat"></svg>
+                  <h5>Messaging</h5>
+                  <p>Build a feature-rich chat experience that includes typing indicators and sent, delivered and read receipts.</p>
+                  <ul class="Vlt-list Vlt-list--simple Vlt-black">
+                    <li>Offline Sync – With built-in caching, messages are saved and sent or received once their device is back online.</li>
+                    <li>Push Notifications – Keep users aware of important alerts by sending notifications to their device.</li>
+                    <li>Text and Image Support – Users can quickly send and receive texts and images from your application.</li>
+                  </ul>
+                </div>
+              </a>
+  - width: 1
+    column:
+      - type: html
+        html:
+          content: |
+              <a class="Vlt-card Vlt-card--clickable" Vlt-card--scrollable style="height: 330px;" href="/client-sdk/in-app-voice/overview">
+                <div class="Vlt-card__content">
+                  <svg class="Vlt-icon Vlt-icon--larger Vlt-purple-dark"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-call"></svg>
+                  <h5>Voice</h5>
+                  <p>Nexmo In-App Voice uses WebRTC and includes all the essentials you need to build a feature-rich voice experience.</p>
+                  <ul class="Vlt-list Vlt-list--simple Vlt-black">
+                    <li>User Control – Users can control whether their audio stream is muted or unmuted.</li>
+                    <li>Notifications – Users can be notified when they receive a call or when participants are muted.</li>
+                    <li>Group Calls – Configure call settings so users can start a group call by adding participants in real time.</li>
+                  </ul>
+                </div>
+              </a>      
+- row:
+    - column:
+        - type: line_divider
+- row:
+    - column:
+      - type: section_header
+        section_header:
+          title: "Platforms"
+          icon:
+            name: ""
+            color: Vlt-purple-dark
+- row:
+  - width: 1
+    column:
+      - type: html
+        html:
+          content: |
+            <a class="Vlt-card Vlt-card--clickable" Vlt-card--scrollable style="height: 350px;" href="/sdk/client-sdk/javascript">
+                <div class="Vlt-card__content">
+                  <svg class="Vlt-icon Vlt-icon--larger Vlt-yellow"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-js"></svg>
+                  <h5>JavaScript</h5>
+                  <p>The JavaScript SDK supports use on the web.</p>
+            <pre class="language-javascript Vlt-prism--copy-disabled"><code>new NexmoClient()
+              .login(USER_JWT)
+              .then(application => {
+                ...
+                application.callServer(user);
+              })</code></pre>
+                </div>
+            </a>
+  - width: 1
+    column:
+      - type: html
+        html:
+          content: |
+            <a class="Vlt-card Vlt-card--clickable" Vlt-card--scrollable style="height: 350px;" href="/sdk/client-sdk/android">
+                  <div class="Vlt-card__content">
+                    <svg class="Vlt-icon Vlt-icon--larger Vlt-green-light"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-android"></svg>
+                    <h5>Android</h5>
+                    <p>The Android SDK supports 6.0+ and API level 23 or above, in both Java and Kotlin.</p>
+              <pre class="language-kotlin Vlt-prism--copy-disabled"><code>client.call(user,
+              NexmoCallHandler.SERVER,
+                callListener);</code></pre>
+                  </div>
+            </a>
+  - width: 1
+    column:
+      - type: html
+        html:
+          content: |
+            <a class="Vlt-card Vlt-card--clickable" Vlt-card--scrollable style="height: 350px;" href="/sdk/client-sdk/ios">
+                <div class="Vlt-card__content">
+                  <svg class="Vlt-icon Vlt-icon--larger"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-apple"></svg>
+                  <h5>iOS</h5>
+                  <p>The iOS SDK supports 10.2 and above in both Objective-C and Swift.</p>
+                  <pre class="language-swift Vlt-prism--copy-disabled">
+            <code style="padding: 0">NXMClient.shared.call(
+              user,
+              callHandler: .server,
+              completionHandler: handler)</code></pre>
+                </div>
+            </a>           
+- row:
+    - column:
+        - type: line_divider
+- row:
+    - column:
+      - type: section_header
+        section_header:
+          title: "Concepts"
+          icon:
+            name: ""
+            color: Vlt-purple-dark
+- row:
+  - column:
+    - type: structured_text
+      structured_text:
+        header: ""
+        text:
+          - content: |
+              Many of the concepts used in the Client SDK are a result of the design of the [Conversation API](/conversation/overview), which is the underlying technology. The following Concepts will help you use the Client SDK.
+            type: large
+- row:
+  - column: 
+    - type: html
+      html:
+        content: |
+          <a class="Vlt-card Vlt-card--clickable" href="/conversation/concepts/application">
+            <div class="Vlt-card__content">
+              <h5>Application</h5>
+              <p>A Vonage Application provides a container for Users and Conversations.</p>
+            </div>
+          </a>
+  - column: 
+    - type: html
+      html:
+        content: |
+          <a class="Vlt-card Vlt-card--clickable" href="/conversation/concepts/user">
+            <div class="Vlt-card__content">
+              <h5>User</h5>
+              <p>A User represents an entity such as a person that wishes to communicate.</p>
+            </div>
+          </a>
+- row:
+  - column: 
+    - type: html
+      html:
+        content: |
+          <a class="Vlt-card Vlt-card--clickable" href="/conversation/concepts/conversation">
+            <div class="Vlt-card__content">
+              <h5>Conversation</h5>
+              <p>A Conversation connects Users and allows them to communicate.</p>
+            </div>
+          </a>
+  - column: 
+    - type: html
+      html:
+        content: |
+          <a class="Vlt-card Vlt-card--clickable" href="/conversation/guides/event-flow">
+            <div class="Vlt-card__content">
+              <h5>Event flow</h5>
+              <p>This topic provides an overview of a event dispatching flow through the system encompassing the Vonage Voice and Conversation services.</p>
+            </div>
+          </a>
+  - column: 
+    - type: html
+      html:
+        content: |
+          <a class="Vlt-card Vlt-card--clickable" href="/conversation/concepts/member">
+            <div class="Vlt-card__content">
+              <h5>Member</h5>
+              <p>A Member is created when a User joins a Conversation.</p>
+            </div>
+          </a>
+- row:
+  - column: 
+    - type: html
+      html:
+        content: |
+          <a class="Vlt-card Vlt-card--clickable" href="/conversation/concepts/call">
+            <div class="Vlt-card__content">
+              <h5>Call</h5>
+              <p>A Call consists of one or more Legs.</p>
+            </div>
+          </a>
+  - column: 
+    - type: html
+      html:
+        content: |
+          <a class="Vlt-card Vlt-card--clickable" href="/conversation/concepts/channel">
+            <div class="Vlt-card__content">
+              <h5>Channel</h5>
+              <p>A Channel refers to one of App, Phone, SIP or Websocket.</p>
+            </div>
+          </a>
+  - column: 
+    - type: html
+      html:
+        content: |
+          <a class="Vlt-card Vlt-card--clickable" href="/conversation/concepts/leg">
+            <div class="Vlt-card__content">
+              <h5>Leg</h5>
+              <p>A Leg connects a User with a Conversation.</p>
+            </div>
+          </a>
+- row:
+  - column: 
+    - type: html
+      html:
+        content: |
+          <a class="Vlt-card Vlt-card--clickable" href="/conversation/concepts/media">
+            <div class="Vlt-card__content">
+              <h5>Media</h5>
+              <p>Media refers to type of communication. It is currently one of text, voice, or video.</p>
+            </div>
+          </a>
+  - column: 
+    - type: html
+      html:
+        content: |
+          <a class="Vlt-card Vlt-card--clickable" href="/conversation/concepts/event">
+            <div class="Vlt-card__content">
+              <h5>Event</h5>
+              <p>Conversations are event-driven. Event objects are generated when key activities occur.</p>
+            </div>
+          </a>
+  - column: 
+    - type: html
+      html:
+        content: |
+          <a class="Vlt-card Vlt-card--clickable" href="/conversation/concepts/session">
+            <div class="Vlt-card__content">
+              <h5>Session</h5>
+              <p>A Session is a live communication stream created with a Client SDK.</p>
+            </div>
+          </a>
