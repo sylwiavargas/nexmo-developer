@@ -119,7 +119,104 @@ page:
               callHandler: .server,
               completionHandler: handler)</code></pre>
                 </div>
-            </a>           
+            </a>
+- row:
+    - column:
+        - type: line_divider
+- row:
+    - column:
+      - type: section_header
+        section_header:
+          title: "Tutorials"
+          icon:
+            name: ""
+            color: Vlt-purple-dark
+- row: 
+  - column: 
+    - type: html
+      html:
+        content: |
+          <div class="Vlt-center">
+            <p class="p-large">Follow our step by step tutorials to get building with the Client SDK.</p>
+            <br>
+          </div>
+- row:
+  - width: 1
+    column: 
+    - type: html
+      html:
+        content: |
+          <div class="Vlt-card">
+            <div class="Vlt-card__content Vlt-center">
+              <h5>Creating a chat app</h5>
+              <a href="/client-sdk/tutorials/in-app-messaging/introduction/javascript">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-yellow"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-js"></svg>
+              </a>
+              <a href="/client-sdk/tutorials/in-app-messaging/introduction/kotlin">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-green-light"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-android"></svg>
+              </a>
+              <a href="/client-sdk/tutorials/in-app-messaging/introduction/swift">
+              <svg class="Vlt-icon Vlt-icon--larger"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-apple"></svg>
+              </a>
+            </div>
+          </div>
+  - width: 1
+    column: 
+    - type: html
+      html:
+        content: |
+          <div class="Vlt-card">
+            <div class="Vlt-card__content Vlt-center">
+              <h5>Receiving a phone call in-app</h5>
+              <a href="/client-sdk/tutorials/phone-to-app/introduction/javascript">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-yellow"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-js"></svg>
+              </a>
+              <a href="/client-sdk/tutorials/phone-to-app/introduction/kotlin">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-green-light"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-android"></svg>
+              </a>
+              <a href="/client-sdk/tutorials/phone-to-app/introduction/swift">
+              <svg class="Vlt-icon Vlt-icon--larger"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-apple"></svg>
+              </a>
+            </div>
+          </div>
+  - width: 1
+    column: 
+    - type: html
+      html:
+        content: |
+          <div class="Vlt-card">
+            <div class="Vlt-card__content Vlt-center">
+              <h5>Making an in-app voice call</h5>
+              <a href="/client-sdk/tutorials/app-to-phone/introduction/javascript">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-yellow"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-js"></svg>
+              </a>
+              <a href="/client-sdk/tutorials/app-to-phone/introduction/kotlin">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-green-light"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-android"></svg>
+              </a>
+              <a href="/client-sdk/tutorials/app-to-phone/introduction/swift">
+              <svg class="Vlt-icon Vlt-icon--larger"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-apple"></svg>
+              </a>
+            </div>
+          </div>
+  - width: 1
+    column: 
+    - type: html
+      html:
+        content: |
+          <div class="Vlt-card">
+            <div class="Vlt-card__content Vlt-center">
+              <h5>Making an app to app voice call</h5>
+              <a href="/client-sdk/tutorials/app-to-app/introduction/javascript">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-yellow"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-js"></svg>
+              </a>
+              <a href="/client-sdk/tutorials/app-to-app/introduction/kotlin">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-green-light"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-android"></svg>
+              </a>
+              <a href="/client-sdk/tutorials/app-to-app/introduction/swift">
+              <svg class="Vlt-icon Vlt-icon--larger"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-apple"></svg>
+              </a>
+            </div>
+          </div>           
 - row:
     - column:
         - type: line_divider
@@ -254,3 +351,328 @@ page:
               <p>A Session is a live communication stream created with a Client SDK.</p>
             </div>
           </a>
+- row:
+    - column:
+        - type: line_divider
+- row:
+    - column:
+      - type: section_header
+        section_header:
+          title: "Guides"
+          icon:
+            name: ""
+            color: Vlt-purple-dark
+- row: 
+  - column: 
+    - type: html
+      html:
+        content: |
+          <a class="Vlt-card Vlt-card--clickable" Vlt-card--scrollable style="height: 150px;" href="/conversation/guides/application-setup">
+            <div class="Vlt-card__content">
+              <h5>How to set up your application</h5>
+              <p>Learn how the different components of you application work together.</p>
+            </div>
+          </a>
+  - column: 
+    - type: html
+      html:
+        content: |
+          <a class="Vlt-card Vlt-card--clickable" Vlt-card--scrollable style="height: 150px;" href="/conversation/guides/jwt-acl">
+            <div class="Vlt-card__content">
+              <h5>How to generate JWTs</h5>
+              <p>JSON Web Tokens (JWTs) and Access Control Lists (ACLs) are a key concept to understand in order to authenticate your apps and users.</p>
+            </div>
+          </a>
+  - column: 
+    - type: html
+      html:
+        content: |
+          <a class="Vlt-card Vlt-card--clickable" Vlt-card--scrollable style="height: 150px;" href="/conversation/guides/user-authentication">
+            <div class="Vlt-card__content">
+              <h5>How to authenticate users</h5>
+              <p>Learn more about the authentication flow of your application.</p>
+            </div>
+          </a>
+- row:
+    - column:
+        - type: line_divider
+- row: 
+  - column: 
+    - type: html
+      html:
+        content: |
+          <div class="Vlt-center">
+            <h4>In-App Messaging Guides</h4>
+            <br>
+          </div>
+- row: 
+  - column: 
+    - type: html
+      html:
+        content: |
+          <div class="Vlt-card">
+            <div class="Vlt-card__content Vlt-center">
+              <h5>Inviting Members</h5>
+              <a href="/client-sdk/in-app-messaging/guides/inviting-members/javascript">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-yellow"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-js"></svg>
+              </a>
+              <a href="/client-sdk/in-app-messaging/guides/inviting-members/kotlin">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-green-light"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-android"></svg>
+              </a>
+              <a href="/client-sdk/in-app-messaging/guides/inviting-members/swift">
+              <svg class="Vlt-icon Vlt-icon--larger"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-apple"></svg>
+              </a>
+            </div>
+          </div>
+  - column: 
+    - type: html
+      html:
+        content: |
+          <div class="Vlt-card">
+            <div class="Vlt-card__content Vlt-center">
+              <h5>Send and Receive Text Messages</h5>
+              <a href="/client-sdk/in-app-messaging/guides/send-receive-text/javascript">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-yellow"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-js"></svg>
+              </a>
+              <a href="/client-sdk/in-app-messaging/guides/send-receive-text/kotlin">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-green-light"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-android"></svg>
+              </a>
+              <a href="/client-sdk/in-app-messaging/guides/send-receive-text/swift">
+              <svg class="Vlt-icon Vlt-icon--larger"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-apple"></svg>
+              </a>
+            </div>
+          </div> 
+  - column: 
+    - type: html
+      html:
+        content: |
+          <div class="Vlt-card">
+            <div class="Vlt-card__content Vlt-center">
+              <h5>Send and Receive Images</h5>
+              <a href="/client-sdk/in-app-messaging/guides/send-receive-image/javascript">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-yellow"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-js"></svg>
+              </a>
+              <a href="/client-sdk/in-app-messaging/guides/send-receive-image/kotlin">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-green-light"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-android"></svg>
+              </a>
+              <a href="/client-sdk/in-app-messaging/guides/send-receive-image/swift">
+              <svg class="Vlt-icon Vlt-icon--larger"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-apple"></svg>
+              </a>
+            </div>
+          </div>
+- row: 
+  - column: 
+    - type: html
+      html:
+        content: |
+          <div class="Vlt-card">
+            <div class="Vlt-card__content Vlt-center">
+              <h5>Seen Receipt</h5>
+              <a href="/client-sdk/in-app-messaging/guides/seen-receipt/javascript">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-yellow"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-js"></svg>
+              </a>
+              <a href="/client-sdk/in-app-messaging/guides/seen-receipt/kotlin">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-green-light"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-android"></svg>
+              </a>
+              <a href="/client-sdk/in-app-messaging/guides/seen-receipt/swift">
+              <svg class="Vlt-icon Vlt-icon--larger"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-apple"></svg>
+              </a>
+            </div>
+          </div> 
+  - column: 
+    - type: html
+      html:
+        content: |
+          <div class="Vlt-card">
+            <div class="Vlt-card__content Vlt-center">
+              <h5>Typing Indicators</h5>
+              <a href="/client-sdk/in-app-messaging/guides/typing-indicators/javascript">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-yellow"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-js"></svg>
+              </a>
+              <a href="/client-sdk/in-app-messaging/guides/typing-indicators/kotlin">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-green-light"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-android"></svg>
+              </a>
+              <a href="/client-sdk/in-app-messaging/guides/typing-indicators/swift">
+              <svg class="Vlt-icon Vlt-icon--larger"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-apple"></svg>
+              </a>
+            </div>
+          </div> 
+  - column: 
+    - type: html
+      html:
+        content: |
+          <div class="Vlt-card">
+            <div class="Vlt-card__content Vlt-center">
+              <h5>Leave Conversation</h5>
+              <a href="/client-sdk/in-app-messaging/guides/leave-conversation/javascript">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-yellow"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-js"></svg>
+              </a>
+              <a href="/client-sdk/in-app-messaging/guides/leave-conversation/kotlin">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-green-light"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-android"></svg>
+              </a>
+              <a href="/client-sdk/in-app-messaging/guides/leave-conversation/swift">
+              <svg class="Vlt-icon Vlt-icon--larger"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-apple"></svg>
+              </a>
+            </div>
+          </div>
+- row: 
+  - width: 1
+    column: 
+    - type: html
+      html:
+        content: |
+          <div class="Vlt-card">
+            <div class="Vlt-card__content Vlt-center">
+              <h5>Utillizing Events</h5>
+              <a href="/client-sdk/in-app-messaging/guides/utilizing-events/javascript">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-yellow"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-js"></svg>
+              </a>
+              <a href="/client-sdk/in-app-messaging/guides/utilizing-events/kotlin">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-green-light"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-android"></svg>
+              </a>
+              <a href="/client-sdk/in-app-messaging/guides/utilizing-events/swift">
+              <svg class="Vlt-icon Vlt-icon--larger"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-apple"></svg>
+              </a>
+            </div>
+          </div>
+  - width: 1 
+    column: 
+    - type: html
+      html:
+        content: |
+          <div class="Vlt-card">
+            <div class="Vlt-card__content Vlt-center">
+              <h5>Handling pagination</h5>
+              <a href="/client-sdk/in-app-messaging/guides/handling-pagination/javascript">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-yellow"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-js"></svg>
+              </a>
+              <a href="/client-sdk/in-app-messaging/guides/handling-pagination/kotlin">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-green-light"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-android"></svg>
+              </a>
+              <a href="/client-sdk/in-app-messaging/guides/handling-pagination/swift">
+              <svg class="Vlt-icon Vlt-icon--larger"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-apple"></svg>
+              </a>
+            </div>
+          </div>
+- row:
+    - column:
+        - type: line_divider
+- row: 
+  - column: 
+    - type: html
+      html:
+        content: |
+          <div class="Vlt-center">
+            <h4>In-App Voice Guides</h4>
+            <br>
+          </div>
+- row: 
+  - column: 
+    - type: html
+      html:
+        content: |
+          <div class="Vlt-card">
+            <div class="Vlt-card__content Vlt-center">
+              <h5>Enable Audio</h5>
+              <a href="/client-sdk/in-app-voice/guides/send-and-receive-dtmf/javascript">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-yellow"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-js"></svg>
+              </a>
+              <a href="/client-sdk/in-app-voice/guides/send-and-receive-dtmf/kotlin">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-green-light"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-android"></svg>
+              </a>
+              <a href="/client-sdk/in-app-voice/guides/send-and-receive-dtmf/swift">
+              <svg class="Vlt-icon Vlt-icon--larger"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-apple"></svg>
+              </a>
+            </div>
+          </div> 
+  - column: 
+    - type: html
+      html:
+        content: |
+          <div class="Vlt-card">
+            <div class="Vlt-card__content Vlt-center">
+              <h5>Send and Receive DTMF</h5>
+              <a href="/client-sdk/in-app-voice/guides/send-receive-text/javascript">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-yellow"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-js"></svg>
+              </a>
+              <a href="/client-sdk/in-app-voice/guides/send-receive-text/kotlin">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-green-light"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-android"></svg>
+              </a>
+              <a href="/client-sdk/in-app-voice/guides/send-receive-text/swift">
+              <svg class="Vlt-icon Vlt-icon--larger"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-apple"></svg>
+              </a>
+            </div>
+          </div> 
+  - column: 
+    - type: html
+      html:
+        content: |
+          <div class="Vlt-card">
+            <div class="Vlt-card__content Vlt-center">
+              <h5>Make a Call</h5>
+              <a href="/client-sdk/in-app-voice/guides/make-call/javascript">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-yellow"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-js"></svg>
+              </a>
+              <a href="/client-sdk/in-app-voice/guides/make-call/kotlin">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-green-light"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-android"></svg>
+              </a>
+              <a href="/client-sdk/in-app-voice/guides/make-call/swift">
+              <svg class="Vlt-icon Vlt-icon--larger"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-apple"></svg>
+              </a>
+            </div>
+          </div>
+- row: 
+  - column: 
+    - type: html
+      html:
+        content: |
+          <div class="Vlt-card">
+            <div class="Vlt-card__content Vlt-center">
+              <h5>Receive a Call</h5>
+              <a href="/client-sdk/in-app-voice/guides/receive-call/javascript">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-yellow"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-js"></svg>
+              </a>
+              <a href="/client-sdk/in-app-voice/guides/receive-call/kotlin">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-green-light"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-android"></svg>
+              </a>
+              <a href="/client-sdk/in-app-voice/guides/receive-call/swift">
+              <svg class="Vlt-icon Vlt-icon--larger"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-apple"></svg>
+              </a>
+            </div>
+          </div> 
+  - column: 
+    - type: html
+      html:
+        content: |
+          <div class="Vlt-card">
+            <div class="Vlt-card__content Vlt-center">
+              <h5>Mute a Call Member</h5>
+              <a href="/client-sdk/in-app-voice/guides/mute-call-memberjavascript">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-yellow"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-js"></svg>
+              </a>
+              <a href="/client-sdk/in-app-voice/guides/mute-call-member/kotlin">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-green-light"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-android"></svg>
+              </a>
+              <a href="/client-sdk/in-app-voice/guides/mute-call-member/swift">
+              <svg class="Vlt-icon Vlt-icon--larger"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-apple"></svg>
+              </a>
+            </div>
+          </div> 
+  - column: 
+    - type: html
+      html:
+        content: |
+          <div class="Vlt-card">
+            <div class="Vlt-card__content Vlt-center">
+              <h5>Earmuff a Call Member</h5>
+              <a href="/client-sdk/in-app-voice/guides/earmuff-call-member/javascript">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-yellow"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-js"></svg>
+              </a>
+              <a href="/client-sdk/in-app-voice/guides/earmuff-call-member/kotlin">
+              <svg class="Vlt-icon Vlt-icon--larger Vlt-green-light"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-android"></svg>
+              </a>
+              <a href="/client-sdk/in-app-voice/guides/earmuff-call-member/swift">
+              <svg class="Vlt-icon Vlt-icon--larger"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-apple"></svg>
+              </a>
+            </div>
+          </div>
