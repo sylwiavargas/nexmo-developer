@@ -71,6 +71,7 @@ In the previous section, you can see that the `acl` claim has `paths` object con
 | `/*/image/**`| Send and receive images.|
 | `/*/media/**`| Send and receive audio.|
 | `/*/knocking/**`| Start phone calls.|
+| `/*/legs/**`| Prewarm phone calls. |
 | `/*/push/**`| Receive push notifications|
 | `/*/devices/**`| Send push notifications.|
 | `/*/applications/**`| Upload push notification certificate.|
@@ -140,6 +141,7 @@ $claims = [
             '/*/applications/**' => (object) [],
             '/*/push/**' => (object) [],
             '/*/knocking/**' => (object) [],
+            '/*/legs/**' => (object) []
         ]
     ]
 ];
