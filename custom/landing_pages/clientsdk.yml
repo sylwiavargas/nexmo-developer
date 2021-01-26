@@ -258,7 +258,6 @@ page:
               <p>A User represents an entity such as a person that wishes to communicate.</p>
             </div>
           </a>
-- row:
   - column: 
     - type: html
       html:
@@ -269,16 +268,7 @@ page:
               <p>A Conversation connects Users and allows them to communicate.</p>
             </div>
           </a>
-  - column: 
-    - type: html
-      html:
-        content: |
-          <a class="Vlt-card Vlt-card--clickable" href="/conversation/guides/event-flow">
-            <div class="Vlt-card__content">
-              <h5>Event flow</h5>
-              <p>This topic provides an overview of a event dispatching flow through the system encompassing the Vonage Voice and Conversation services.</p>
-            </div>
-          </a>
+- row:
   - column: 
     - type: html
       html:
@@ -289,7 +279,6 @@ page:
               <p>A Member is created when a User joins a Conversation.</p>
             </div>
           </a>
-- row:
   - column: 
     - type: html
       html:
@@ -298,6 +287,7 @@ page:
             <div class="Vlt-card__content">
               <h5>Call</h5>
               <p>A Call consists of one or more Legs.</p>
+              <br>
             </div>
           </a>
   - column: 
@@ -310,6 +300,7 @@ page:
               <p>A Channel refers to one of App, Phone, SIP or Websocket.</p>
             </div>
           </a>
+- row:
   - column: 
     - type: html
       html:
@@ -320,7 +311,6 @@ page:
               <p>A Leg connects a User with a Conversation.</p>
             </div>
           </a>
-- row:
   - column: 
     - type: html
       html:
@@ -331,6 +321,7 @@ page:
               <p>Media refers to type of communication. It is currently one of text, voice, or video.</p>
             </div>
           </a>
+- row:
   - column: 
     - type: html
       html:
@@ -338,7 +329,7 @@ page:
           <a class="Vlt-card Vlt-card--clickable" href="/conversation/concepts/event">
             <div class="Vlt-card__content">
               <h5>Event</h5>
-              <p>Conversations are event-driven. Event objects are generated when key activities occur.</p>
+              <p>Conversations are event-driven. Events are generated when key activities occur.</p>
             </div>
           </a>
   - column: 
@@ -367,7 +358,7 @@ page:
     - type: html
       html:
         content: |
-          <a class="Vlt-card Vlt-card--clickable" Vlt-card--scrollable style="height: 150px;" href="/conversation/guides/application-setup">
+          <a class="Vlt-card Vlt-card--clickable" Vlt-card--scrollable style="height: 120px;" href="/conversation/guides/application-setup">
             <div class="Vlt-card__content">
               <h5>How to set up your application</h5>
               <p>Learn how the different components of you application work together.</p>
@@ -377,7 +368,18 @@ page:
     - type: html
       html:
         content: |
-          <a class="Vlt-card Vlt-card--clickable" Vlt-card--scrollable style="height: 150px;" href="/conversation/guides/jwt-acl">
+          <a class="Vlt-card Vlt-card--clickable" Vlt-card--scrollable style="height: 120px;" href="/conversation/guides/event-flow">
+            <div class="Vlt-card__content">
+              <h5>Event flow</h5>
+              <p>This topic provides an overview of a event dispatching flow through the system encompassing the Vonage Voice and Conversation services.</p>
+            </div>
+          </a>
+- row:
+  - column: 
+    - type: html
+      html:
+        content: |
+          <a class="Vlt-card Vlt-card--clickable" Vlt-card--scrollable style="height: 120px;" href="/conversation/guides/jwt-acl">
             <div class="Vlt-card__content">
               <h5>How to generate JWTs</h5>
               <p>JSON Web Tokens (JWTs) and Access Control Lists (ACLs) are a key concept to understand in order to authenticate your apps and users.</p>
@@ -387,7 +389,7 @@ page:
     - type: html
       html:
         content: |
-          <a class="Vlt-card Vlt-card--clickable" Vlt-card--scrollable style="height: 150px;" href="/conversation/guides/user-authentication">
+          <a class="Vlt-card Vlt-card--clickable" Vlt-card--scrollable style="height: 120px;" href="/conversation/guides/user-authentication">
             <div class="Vlt-card__content">
               <h5>How to authenticate users</h5>
               <p>Learn more about the authentication flow of your application.</p>
