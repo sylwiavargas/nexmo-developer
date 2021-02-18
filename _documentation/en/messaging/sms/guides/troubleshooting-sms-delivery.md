@@ -10,7 +10,7 @@ SMS API applications are straightforward to build but when messages are not bein
 
 The best place to find clues are the logs. You can create your own logs by setting up delivery status callbacks (DLR webhooks). Alternatively, you can access the Vonage platform logs either by using the [Reports API](/reports/overview) to download batches of SMS logs (CDRs), or searching the logs in the [Vonage API Dashboard](https://dashboard.nexmo.com/). This article will help you to understand how HTTP SMS works, what the most common errors are, and how to recognize them.
 
-> **Note**: This guide covers troubleshooting failed delivery following a successful SMS API request. To troubleshoot request failure, please see the [Troubleshooting Failed Requests](/messaging/sms/guides/troubleshooting-sms) guide.
+> **Note**: This guide covers troubleshooting failed delivery following a successful SMS API request. To troubleshoot request failure, please see the [Troubleshooting failed requests](/messaging/sms/guides/troubleshooting-sms) guide.
 
 ## Where to start
 
