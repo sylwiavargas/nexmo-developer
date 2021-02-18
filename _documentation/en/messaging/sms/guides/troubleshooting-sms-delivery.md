@@ -21,7 +21,7 @@ Every SMS error is unique, but most outages have common symptoms:
 * Someone on your team needs help with a batch of messages that are failing
 * You’ve built something new, but you’re not receiving any feedback
 
-Each of those issues requires you to examine the available data differently, and you can find the appropriate filters in the “search by” tabs on the Dashboard.
+Each of those issues requires you to examine the available data differently, and you can find the appropriate filters in the "search by" tabs on the Dashboard.
 
 ![Filtering SMS data in the Dashboard](/images/messaging/sms/filter-sms-dashboard.png "Filtering SMS data in the Dashboard")
 
