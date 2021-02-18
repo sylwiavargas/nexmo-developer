@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting SMS Delivery
+title: Troubleshooting SMS delivery
 description: How to diagnose SMS delivery problems
 navigation_weight: 7
 ---
