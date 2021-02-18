@@ -6,7 +6,7 @@ navigation_weight: 6
 
 # Troubleshooting Failed SMS API Requests
 
-> **Note**: This guide covers troubleshooting failed API requests. If your API request is successful but your message has not been delivered, please see the [Troubleshooting SMS delivery](/messaging/sms/guides/troubleshooting-sms) guide.
+> **Note**: This guide covers troubleshooting failed API requests. If your API request is successful but your message has not been delivered, please see the [Troubleshooting SMS delivery](/messaging/sms/guides/troubleshooting-sms-delivery) guide.
 
 When you [send an SMS](/messaging/sms/code-snippets/send-an-sms), the SMS API returns a JSON response that contains an array of `message` objects, one for each message:
 
