@@ -1,7 +1,7 @@
 ---
 title: SMPP access
 description: Using SMPP instead of REST to access the SMS API.
-navigation_weight: 7
+navigation_weight: 8
 ---
 
 # SMPP Access
