@@ -13,7 +13,7 @@ NexmoClient client = new NexmoClient.Builder().build(this);
 
 # Set connection listener
 
-You have to listen for the st
+Now below client initialization code add connection listener to monitor connection state:
 
 ```java
 client.setConnectionListener((connectionStatus, connectionStatusReason) -> runOnUiThread(() -> connectionStatusTextView.setText(connectionStatus.toString())));
@@ -21,7 +21,7 @@ client.setConnectionListener((connectionStatus, connectionStatusReason) -> runOn
 
 
 
-Now client needs to authenticate to the Vonage servers. The following additions are required to `onCreate` method inside `MainActivity`. Replace `ALICE_TOKEN` with JWT generated in previous step:
+Now client needs to authenticate to the Vonage servers. The following additions are required to `onCreate` method inside `MainActivity`. Replace the `ALICE_TOKEN` with the JWT token, you obtained previously from Nexmo CLI:
 
 ```java
 client.login("ALICE_TOKEN");
@@ -30,4 +30,6 @@ client.login("ALICE_TOKEN");
 
 ## Build and Run
 
-Press `Cmd + R` to build and run the app.
+Press the `Ctrl + R` keys to build and run the app again. After successful login you will see `CONNECTED` text:
+
+![Connected](/screenshots/tutorials/client-sdk/phone-to-app/connected.png)

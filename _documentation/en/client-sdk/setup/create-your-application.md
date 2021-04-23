@@ -33,10 +33,10 @@ npm install -g nexmo-cli@beta
 
 Set up the Nexmo CLI to use your Vonage API Key and API Secret. You can get these from the [settings page](https://dashboard.nexmo.com/settings) in the Vonage Dashboard.
 
-Run the following command in a terminal, while replacing `api_key` and `api_secret` with your Vonage API key and secret:
+Run the following command in a terminal, while replacing `API_KEY` and `API_SECRET` with your Vonage API key and secret:
 
 ```bash
-nexmo setup api_key api_secret
+nexmo setup API_KEY API_SECRET
 ```
 
 This adds this authentication information to the `.nexmorc` file in your home directory.
@@ -49,7 +49,7 @@ You now need to create a Vonage application. In this example you create an appli
 
 2) Change into the project directory you've now created.
 
-3) Use the following command to create a Vonage application with Voice and WebRTC capabilities. Replace the webhook URLs with your own.
+3) Use the following command to create a Vonage application with Voice and WebRTC capabilities. Replace the webhook URLs with your own. If your platform restricts the inbound traffic it can receive using IP address-ranges you'll need to add the [Vonage IP addresses](https://help.nexmo.com/hc/en-us/articles/360035471331) to your allow list. The IP addresses can be fetched programmatically by sending a GET request to `https://api.nexmo.com/ips-v4`.
 
 ``` shell
 nexmo app:create "My Sample App" --capabilities=voice,rtc --voice-answer-url=https://example.com/webhooks/answer --voice-event-url=https://example.com/webhooks/event --rtc-event-url=https://example.com/webhooks/rtc --keyfile=private.key

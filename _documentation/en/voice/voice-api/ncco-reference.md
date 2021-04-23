@@ -5,7 +5,7 @@ description: The Nexmo Call Control Objects used to manage your Voice API calls.
 
 # NCCO reference
 
-A Nexmo Call Control Object (NCCO) is a JSON array that you use to control the flow of a Voice API call. For your NCCO to execute correctly, the JSON objects must be valid.
+A Call Control Object (NCCO) is a JSON array that you use to control the flow of a Voice API call. For your NCCO to execute correctly, the JSON objects must be valid.
 
 While developing and testing NCCOs, you can use the Voice Playground to try out NCCOs interactively. You can [read more about it in the Voice API Overview](/voice/voice-api/overview#voice-playground) or [go directly to the Voice Playground in the Dashboard](https://dashboard.nexmo.com/voice/playground).
 
@@ -138,6 +138,7 @@ Option | Description | Required
 -- | -- | --
 `endpoint` | Array of `endpoint` objects to connect to. Currently supports a **maximum** of one `endpoint` object. [Available endpoint types](#endpoint-types-and-values) | Yes
 `from` | A number in [E.164](https://en.wikipedia.org/wiki/E.164) format that identifies the caller.§§ This must be one of your Vonage virtual numbers, another value will result in the caller ID being unknown. If the caller is an app user, this option should be omitted.| No
+`randomFromNumber` | Set to `true` to use a  random phone number as `from`. The number will be selected from the list of the numbers assigned to the current application. `randomFromNumber: true` cannot be used together with `from`. The default value is `false` | No
 `eventType` | Set to `synchronous` to: <ul class="Vlt-list Vlt-list--simple"><li>make the `connect` action synchronous</li><li>enable `eventUrl` to return an NCCO that overrides the current NCCO when a call moves to specific states.</li></ul> | No
 `timeout` |  If the call is unanswered, set the number in seconds before Vonage stops ringing `endpoint`. The default value is `60`.
 `limit` | Maximum length of the call in seconds. The default and maximum value is `7200` seconds (2 hours). | No
@@ -315,6 +316,7 @@ Option | Description | Required
 `context` | Array of hints (strings) to improve recognition quality if certain words are expected from the user. | No
 `startTimeout` | Controls how long the system will wait for the user to start speaking. The range of possible values is between 1 second and 10 seconds. | No
 `maxDuration` | Controls maximum speech duration (from the moment user starts speaking). The default value is 60 (seconds). The range of possible values is between 1 and 60 seconds. | No
+`saveAudio` | Set to `true` so the speech input recording (`recording_url`) is sent to your webhook endpoint at `eventUrl`. The default value is `false`. | No
 
 
 The following example shows the parameters sent to the `eventUrl` webhook for DTMF input:
@@ -339,6 +341,7 @@ The following example shows the parameters sent back to the `eventUrl` webhook f
 ```json
 {
   "speech": {
+    "recording_url": "https://api-us.nexmo.com/v1/files/eeeeeee-ffff-0123-4567-0123456789ab",
     "timeout_reason": "end_on_silence_timeout",
     "results": [
       {

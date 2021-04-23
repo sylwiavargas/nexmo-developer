@@ -1,4 +1,4 @@
-title: How to Build a Voicemail with .NET
+title: Build a Voicemail
 products:
  - voice/voice-api
 description: A tutorial showing you how to build an app that records incoming phone calls with .NET
@@ -31,7 +31,7 @@ prerequisites:
 tasks:
   - voice/voice-api/create-voice-csproj  
   - install-vonage-dotnet
-  - voice/voice-api/create-voice-controller
+  - voice/voice-api/create-voice-controller-dotnet
   - voice/voice-api/voicemail-dotnet/add-voicemail-answer-route
   - voice/voice-api/voicemail-dotnet/add-recording-route
   - voice/voice-api/configure-aspnet-app-vapi
