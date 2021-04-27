@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>DocStrap Source: pages/page.js</title>
+	<title>DocStrap Class: MembersPage</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -67,94 +67,694 @@
 <div class="row">
 
 	
-	<div class="col-md-12">
+	<div class="col-md-8">
 	
 		<div id="main">
 			
 
-		<h1 class="page-title">Source: pages/page.js</h1>
-    
+	<h1 class="page-title">Class: MembersPage</h1>
 <section>
-    <article>
-        <pre
-            class="sunlight-highlight-javascript linenums">'use strict';
-Object.defineProperty(exports, "__esModule", { value: true });
-/*
- * Nexmo Client SDK
- *
- * Copyright (c) Nexmo Inc.
-*/
-const nexmoClientError_1 = require("../nexmoClientError");
-/** Page Class for Paginated Results
- *
- * @class Page
- * @param {number} page_size the number of resources returned in a single request list
- * @param {string} order 'asc' or 'desc' ordering of resources (usually based on creation time)
- * @param {string} cursor cursor parameter to access the next or previous page of a data set
- * @param {Application} application - the parent Application
- * @param {string} [event_type] the type of event used to filter event requests
- *
- * @private
-*/
-class Page {
-    constructor(params = {}) {
-        this.page_size = params.page_size;
-        this.order = params.order;
-        this.cursor = params.cursor;
-        this.application = params.application;
-        if (params.event_type &amp;&amp; params.event_type.length > 0) {
-            this.event_type = params.event_type;
-        }
-    }
-    /**
-     * Check if previous page exists
-     * @returns {Boolean}
-     * @example &lt;caption>Check if previous page exists&lt;/caption>
-     * // currentPage is the current Conversations or Events Page
-     * currentPage.hasPrev() // true or false
-    */
-    hasPrev() {
-        return this.cursor.prev ? this.cursor.prev.length > 0 : false;
-    }
-    /**
-     * Check if next page exists
-     * @returns {Boolean}
-     * @example &lt;caption>Check if next page exists&lt;/caption>
-     * // currentPage is the current Conversations or Events Page
-     * currentPage.hasNext() // true or false
-    */
-    hasNext() {
-        return this.cursor.next ? this.cursor.next.length > 0 : false;
-    }
-    /**
-      * Create config params for paginationRequest
-      * @param {string} cursor cursor parameter to access the next or previous page of a data set
-      * @returns {Object}
-     * @private
-    */
-    _getConfig(cursor) {
-        const config = {
-            page_size: this.page_size,
-            order: this.order,
-            cursor,
-            ...(this.event_type &amp;&amp; { event_type: this.event_type })
-        };
-        return config;
-    }
-    /**
-     * Create a nexmoClientError when page does not exist
-     * @private
-    */
-    _getError() {
-        return Promise.reject(new nexmoClientError_1.NexmoClientError('error:invalid-cursor'));
-    }
-}
-exports.default = Page;
-module.exports = Page;
-</pre>
-    </article>
-</section>
 
+<header>
+    
+        <h2>
+        MembersPage
+        </h2>
+        
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+<hr>
+<dt>
+    <h4 class="name" id="MembersPage"><span class="type-signature"></span>new MembersPage(items)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>A Members Page</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>items</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Map</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>map of members fetched in the paginated query</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="pages_members_page.js.html">pages/members_page.js</a>,
+				 <a href="pages_members_page.js.html#sunlight-1-line-13">line 13</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="Page.html">Page</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="getNext"><span class="type-signature"></span>getNext()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Fetch the next page if exists</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="pages_members_page.js.html">pages/members_page.js</a>,
+				 <a href="pages_members_page.js.html#sunlight-1-line-55">line 55</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;<a href="Page.html">Page</a>></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+        <p class="code-caption">Fetch the next page if exists</p>
+    
+    <pre class="sunlight-highlight-javascript">currentMembersPage.getNext().then((nextMembersPage) =&gt; {
+   console.log(&quot;next members page &quot;, nextMembersPage);
+ }).catch((error) =&gt; {
+   console.error(&quot;error getting next members page &quot;, error);
+ });</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getPrev"><span class="type-signature"></span>getPrev()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Fetch the previous page if exists</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="pages_members_page.js.html">pages/members_page.js</a>,
+				 <a href="pages_members_page.js.html#sunlight-1-line-40">line 40</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;<a href="Page.html">Page</a>></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+        <p class="code-caption">Fetch the previous page if exists</p>
+    
+    <pre class="sunlight-highlight-javascript">currentMembersPage.getPrev().then((prevMembersPage) =&gt; {
+   console.log(&quot;previous members page &quot;, prevMembersPage);
+ }).catch((error) =&gt; {
+   console.error(&quot;error getting previous members page &quot;, error);
+ });</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="hasNext"><span class="type-signature"></span>hasNext()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Check if next page exists</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Page.html#hasNext">Page#hasNext</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="pages_page.js.html">pages/page.js</a>,
+				 <a href="pages_page.js.html#sunlight-1-line-47">line 47</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+        <p class="code-caption">Check if next page exists</p>
+    
+    <pre class="sunlight-highlight-javascript">// currentPage is the current Conversations or Events Page
+currentPage.hasNext() // true or false</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="hasPrev"><span class="type-signature"></span>hasPrev()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Check if previous page exists</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Page.html#hasPrev">Page#hasPrev</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="pages_page.js.html">pages/page.js</a>,
+				 <a href="pages_page.js.html#sunlight-1-line-37">line 37</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+        <p class="code-caption">Check if previous page exists</p>
+    
+    <pre class="sunlight-highlight-javascript">// currentPage is the current Conversations or Events Page
+currentPage.hasPrev() // true or false</pre>
+
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 
@@ -164,6 +764,10 @@ module.exports = Page;
 
 	<div class="clearfix"></div>
 
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
 	
 
 </div>

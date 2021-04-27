@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>DocStrap Source: pages/page.js</title>
+	<title>DocStrap Source: pages/members_page.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,85 +72,73 @@
 		<div id="main">
 			
 
-		<h1 class="page-title">Source: pages/page.js</h1>
+		<h1 class="page-title">Source: pages/members_page.js</h1>
     
 <section>
     <article>
         <pre
             class="sunlight-highlight-javascript linenums">'use strict';
+var __importDefault = (this &amp;&amp; this.__importDefault) || function (mod) {
+    return (mod &amp;&amp; mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 /*
  * Nexmo Client SDK
  *
  * Copyright (c) Nexmo Inc.
 */
-const nexmoClientError_1 = require("../nexmoClientError");
-/** Page Class for Paginated Results
+const page_1 = __importDefault(require("./page"));
+const member_1 = __importDefault(require("../member"));
+/**
+ * A Members Page
  *
- * @class Page
- * @param {number} page_size the number of resources returned in a single request list
- * @param {string} order 'asc' or 'desc' ordering of resources (usually based on creation time)
- * @param {string} cursor cursor parameter to access the next or previous page of a data set
- * @param {Application} application - the parent Application
- * @param {string} [event_type] the type of event used to filter event requests
- *
- * @private
+ * @class MembersPage
+ * @param {Map} items map of members fetched in the paginated query
+ * @extends Page
 */
-class Page {
-    constructor(params = {}) {
-        this.page_size = params.page_size;
-        this.order = params.order;
-        this.cursor = params.cursor;
-        this.application = params.application;
-        if (params.event_type &amp;&amp; params.event_type.length > 0) {
-            this.event_type = params.event_type;
-        }
+class MembersPage extends page_1.default {
+    constructor(params) {
+        super(params);
+        this.conversation = params.conversation;
+        this.items = new Map();
+        // Iterate and create the conversations if not existent
+        params.items.forEach((member) => {
+            this.items.set(member.id, new member_1.default(this.conversation, member));
+        });
     }
     /**
-     * Check if previous page exists
-     * @returns {Boolean}
-     * @example &lt;caption>Check if previous page exists&lt;/caption>
-     * // currentPage is the current Conversations or Events Page
-     * currentPage.hasPrev() // true or false
+     * Fetch the previous page if exists
+     * @returns {Promise&lt;Page>}
+     * @example &lt;caption>Fetch the previous page if exists&lt;/caption>
+     *  currentMembersPage.getPrev().then((prevMembersPage) => {
+     *    console.log("previous members page ", prevMembersPage);
+     *  }).catch((error) => {
+     *    console.error("error getting previous members page ", error);
+     *  });
     */
-    hasPrev() {
-        return this.cursor.prev ? this.cursor.prev.length > 0 : false;
+    getPrev() {
+        if (!this.hasPrev())
+            return this._getError();
+        return this.conversation.getMembers(this._getConfig(this.cursor.prev));
     }
     /**
-     * Check if next page exists
-     * @returns {Boolean}
-     * @example &lt;caption>Check if next page exists&lt;/caption>
-     * // currentPage is the current Conversations or Events Page
-     * currentPage.hasNext() // true or false
+     * Fetch the next page if exists
+     * @returns {Promise&lt;Page>}
+     * @example &lt;caption>Fetch the next page if exists&lt;/caption>
+     *  currentMembersPage.getNext().then((nextMembersPage) => {
+     *    console.log("next members page ", nextMembersPage);
+     *  }).catch((error) => {
+     *    console.error("error getting next members page ", error);
+     *  });
     */
-    hasNext() {
-        return this.cursor.next ? this.cursor.next.length > 0 : false;
-    }
-    /**
-      * Create config params for paginationRequest
-      * @param {string} cursor cursor parameter to access the next or previous page of a data set
-      * @returns {Object}
-     * @private
-    */
-    _getConfig(cursor) {
-        const config = {
-            page_size: this.page_size,
-            order: this.order,
-            cursor,
-            ...(this.event_type &amp;&amp; { event_type: this.event_type })
-        };
-        return config;
-    }
-    /**
-     * Create a nexmoClientError when page does not exist
-     * @private
-    */
-    _getError() {
-        return Promise.reject(new nexmoClientError_1.NexmoClientError('error:invalid-cursor'));
+    getNext() {
+        if (!this.hasNext())
+            return this._getError();
+        return this.conversation.getMembers(this._getConfig(this.cursor.next));
     }
 }
-exports.default = Page;
-module.exports = Page;
+exports.default = MembersPage;
+module.exports = MembersPage;
 </pre>
     </article>
 </section>
