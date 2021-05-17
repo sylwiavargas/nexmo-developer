@@ -27,7 +27,15 @@ During Beta Vonage will expand the capabilities of the API.
 
 ## Provisioning
 
-Subaccounts API is released with **restricted availability**. To get access to the Subaccounts API please contact your account manager. [Vonage Partners](https://www.vonage.com/partners/) get access automatically.
+Subaccounts API is released with **restricted availability**. Access to some Subaccounts API endpoints will depend on the Primary Account Partner Status. Also the number of subaccounts allowed for a Primary Account will depend on its Partner Status. There are 3 different Partner Statuses:
+
+Status | Number of subaccounts | Independent balance 
+-- | -- | -- 
+Normal Account | 3 | not allowed
+Partner Account | 500 | allowed
+Partner Account Advanced | 1000 | allowed 
+
+Not allowed independent balance means that the subaccounts will always share the master balance and they won't be able to do balance or credit transfers
 
 ## Supported features
 
