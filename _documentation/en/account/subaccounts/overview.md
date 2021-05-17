@@ -35,7 +35,9 @@ Normal Account | 3 | not allowed
 Partner Account | 500 | allowed
 Partner Account Advanced | 1000 | allowed 
 
-Not allowed independent balance means that the subaccounts will always share the master balance and they won't be able to do balance or credit transfers
+Not allowed independent balance means that the subaccounts will always share the master balance not being allowed to update this field (use_primary_account_balance) and they won't be able to do balance or credit transfers.
+
+Subaccounts won't be able to access any of the Subaccounts API endpoints, only Primary Accounts will.
 
 ## Supported features
 
