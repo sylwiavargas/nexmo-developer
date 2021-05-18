@@ -25,7 +25,7 @@ During Beta Vonage will expand the capabilities of the API.
 
 ## Provisioning
 
-Subaccounts API is released with **restricted availability**. Access to some endpoints will depend on the “Partner Status” of the primary account. The number of subaccounts allowed for a primary account will also depend on its Partner Status. 
+Access to some endpoints will depend on the “Partner Status” of the primary account. The number of subaccounts allowed for a primary account will also depend on its Partner Status. 
 
 New accounts have a “Normal” Partner Status by default. To change your Partner Status please contact your account manager. [Vonage Partners](https://www.vonage.com/partners/). 
 
