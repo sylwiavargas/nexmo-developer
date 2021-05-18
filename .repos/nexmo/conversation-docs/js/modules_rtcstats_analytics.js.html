@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>DocStrap Source: modules/errors_emitter.js</title>
+	<title>DocStrap Source: modules/rtcstats_analytics.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,82 +72,190 @@
 		<div id="main">
 			
 
-		<h1 class="page-title">Source: modules/errors_emitter.js</h1>
+		<h1 class="page-title">Source: modules/rtcstats_analytics.js</h1>
     
 <section>
     <article>
         <pre
-            class="sunlight-highlight-javascript linenums">'use strict';
+            class="sunlight-highlight-javascript linenums">"use strict";
+var __importDefault = (this &amp;&amp; this.__importDefault) || function (mod) {
+    return (mod &amp;&amp; mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-/*
- * Nexmo Client SDK
- *  Errors Emitter
- *
- * Copyright (c) Nexmo Inc.
-*/
-const loglevel_1 = require("loglevel");
-const nexmoClientError_1 = require("../nexmoClientError");
+const rtcStatsAdapterParser = require("rtc-stats-adapter");
+const calculateMos = require('rtc-stats-adapter/calculate-mos');
+const utils_1 = __importDefault(require("../utils"));
 /**
- * Class that can emit errors via any emitter passed to it.
- * @class ErrorsEmitter
- * @param {Emitter} emitter - Any event emitter that implements "emit" and "releaseGroup". Basically object that is mixed with Wildemitter.
- * @property {string} LISTENER_GROUP='NXM-errors' - the group this emitter will register
- * @emits Emitter#NXM-errors
+ * Collect WebRTC Report data
+ * Removes credential information from the STUN.TURN server configuration.
+ * performs Delta compression
+ *
+ * if isCallback is true the report includes a MOS score : trace('mos', mos, report);
+ *
+ * @param {object} context
+ * @param {Application} context.application
+ * @param {Conversation} context.conversation
+ * @param {RTCPeerConnection} context.pc peer connection object
+ * @param {string} context.rtc_id id of a leg
+ * @param {RTCStatsConfig} context.config config settings for ananlytics
+ * @property {MosReport} mos_report the final mos report to be sent when the stream is closed
+ * @property {number} _reportsCount the number of reports taken for mos average
+ * @property {number} _mosSum the summary of mos scores
  * @private
-*/
-/**
- * Application listening for client and expired-token errors events.
- *
- * @event Application#NXM-errors
- *
- * @property {NexmoClientError} error
- *
- * @example &lt;caption>listen for client error events on Application level&lt;/caption>
- * application.on('*', 'NXM-errors', (error) => {
- *    console.log('Error thrown with type ' + error.type);
- *  });
- * @example &lt;caption>listen for expired-token error events and then update the token on Application level&lt;/caption>
- * application.on('system:error:expired-token', 'NXM-errors', (error) => {
- * 	console.log('token expired');
- * 	application.updateToken(token);
- * });
-*/
-class ErrorsEmitter {
-    constructor(emitter) {
-        this.log = loglevel_1.getLogger(this.constructor.name);
-        if (!emitter) {
-            throw new nexmoClientError_1.NexmoClientError('no emitter object passed for the Error Emitter');
+ */
+class RTCStatsAnalytics {
+    constructor(context) {
+        this.mos_report = { min: 5, max: 0 };
+        this._reportsCount = 0;
+        this._mosSum = 0;
+        this.intervals = [];
+        this._deprecationWarningSent = false;
+        if (!context || !context.application || !context.rtc_id || !context.pc) {
+            return;
         }
-        this.emitter = emitter;
-        this.LISTENER_GROUP = 'NXM-errors';
+        this.attachHandlers(context);
+        this.startSendingStats(context);
+        this.startEmittingStats(context);
     }
-    /**
-     * Detect if the param.type includes error and emit that payload in the LISTENER_GROUP
-     * @param param - the payload to forward in the LISTENER_GROUP
-     * @param param.type - the type of the event to check if it's an error
-    */
-    emitResponseIfError(param) {
-        if (this._isTypeError(param.type)) {
-            return this.emitter.emit(param.type, this.LISTENER_GROUP, param);
+    attachHandlers(context) {
+        const { pc } = context;
+        const onConnectionStateChange = pc.onconnectionstatechange
+            ? pc.onconnectionstatechange
+            : () => { };
+        pc.onconnectionstatechange = (event) => {
+            onConnectionStateChange.call(pc, event);
+            switch (pc.connectionState) {
+                case "disconnected":
+                case "failed":
+                case "closed":
+                    this.removeIntervals();
+                    this.emitLastReport(context);
+            }
+        };
+    }
+    emitLastReport(context) {
+        const { application, conversation = null, rtc_id, config: { emit_events, emit_rtc_analytics }, } = context;
+        const mos_report = this.getMOSReport();
+        const mos = mos_report.last;
+        if (mos) {
+            if (emit_rtc_analytics) {
+                application.emit("rtcstats:analytics", {
+                    type: "mos_report",
+                    mos,
+                    rtc_id,
+                    mos_report
+                });
+            }
+            if (emit_events) {
+                if (!this._deprecationWarningSent) {
+                    this._deprecationWarningSent = true;
+                    console.warn('"rtcstats:report" event is deprecated. Use "rtcstats:analytics" instead');
+                }
+                /**
+                 * @deprecated Use "rtcstats:analytics instead"
+                 */
+                application.emit("rtcstats:report", mos, null, conversation, mos_report);
+            }
         }
-        return;
+    }
+    startSendingStats(context) {
+        const { pc, rtc_id, config: { remote_collection, remote_collection_url, remote_collection_interval, }, } = context;
+        if (!remote_collection)
+            return;
+        const remote_collection_interval_id = window.setInterval(() => {
+            pc.getStats(null).then((stats) => {
+                const data = rtcStatsAdapterParser(stats);
+                data.legId = rtc_id;
+                utils_1.default.networkRequest({
+                    url: remote_collection_url,
+                    type: "POST",
+                    data,
+                });
+            });
+            if (pc.connectionState === "closed" || pc.signalingState === 'closed') {
+                this.removeIntervals();
+            }
+        }, remote_collection_interval);
+        this.intervals.push(remote_collection_interval_id);
+    }
+    startEmittingStats(context) {
+        const { application, conversation = null, pc, rtc_id, config: { emit_events, emit_rtc_analytics, emit_interval }, } = context;
+        if (!emit_events &amp;&amp; !emit_rtc_analytics)
+            return;
+        const emit_stats_interval_id = window.setInterval(() => {
+            pc.getStats(null).then((stats) => {
+                const mos = this.getMos(stats);
+                if (!mos)
+                    return;
+                if (emit_rtc_analytics) {
+                    application.emit("rtcstats:analytics", {
+                        type: "mos",
+                        mos,
+                        report: stats,
+                        rtc_id,
+                    });
+                }
+                if (emit_events) {
+                    if (!this._deprecationWarningSent) {
+                        this._deprecationWarningSent = true;
+                        console.warn('"rtcstats:report" event is deprecated. Use "rtcstats:analytics" instead');
+                    }
+                    /**
+                     * @deprecated Use "rtcstats:analytics instead"
+                     */
+                    application.emit("rtcstats:report", mos, stats, conversation);
+                }
+            });
+            if (pc.connectionState === "closed" || pc.signalingState === 'closed') {
+                this.removeIntervals();
+                this.emitLastReport(context);
+            }
+        }, emit_interval);
+        this.intervals.push(emit_stats_interval_id);
+    }
+    removeIntervals() {
+        this.intervals.forEach((interval) => window.clearInterval(interval));
+        this.intervals = [];
+    }
+    getMos(stats) {
+        const mos = calculateMos(stats);
+        this.updateMOSReport(parseInt(mos));
+        return mos;
     }
     /**
-     * Release Group on the registered emitter (using the namespace LISTENER_GROUP that is set)
-    */
-    cleanup() {
-        return this.emitter.releaseGroup(this.LISTENER_GROUP);
+     * Update the mos_report object
+     * @param {number} mos the MOS score
+     * @returns {object} the report object
+     */
+    updateMOSReport(mos) {
+        this._reportsCount++;
+        this._mosSum += mos;
+        this.mos_report.last = mos;
+        this.mos_report.min = mos &lt; this.mos_report.min ? mos : this.mos_report.min;
+        this.mos_report.max = mos > this.mos_report.max ? mos : this.mos_report.max;
+        this.mos_report.average = this._mosSum / this._reportsCount;
     }
     /**
-     * Returns true if the param includes 'error'
-     * @param {string} type - the error type to check
-    */
-    _isTypeError(param) {
-        return param.indexOf('error') !== -1;
+     * Update the MOS report object
+     * mos_report.min - the minimum MOS value during the stream
+     * mos_report.max - the maximum MOS value during the stream
+     * mos_report.last - the last MOS value during the stream
+     * mos_report.average - the average MOS value during the stream
+     * @returns {MosReport} mos_report - a report for the MOS values
+     *
+     */
+    getMOSReport() {
+        this.mos_report.min = RTCStatsAnalytics.normaliseFloat(this.mos_report.min);
+        this.mos_report.max = RTCStatsAnalytics.normaliseFloat(this.mos_report.max);
+        this.mos_report.last = RTCStatsAnalytics.normaliseFloat(this.mos_report.last);
+        this.mos_report.average = RTCStatsAnalytics.normaliseFloat(this.mos_report.average);
+        return this.mos_report;
+    }
+    static normaliseFloat(value) {
+        return parseFloat(value).toFixed(6);
     }
 }
-exports.default = ErrorsEmitter;
-module.exports = ErrorsEmitter;
+exports.default = RTCStatsAnalytics;
 </pre>
     </article>
 </section>
