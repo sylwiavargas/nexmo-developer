@@ -7,8 +7,6 @@ description: The Subaccounts API (Beta) overview.
 
 # Overview of Subaccounts API (Beta)
 
-> **IMPORTANT:** Subaccounts API is released with **restricted availability**.
-
 ## Introduction
 
 The Subaccounts API allows you to programmatically create and manage subaccounts for separate business units, use cases, product stages, or separate customers. The API empowers developers to handle various aspects of subaccount logistics: manage credit, track usage, set usage limits, suspend subaccounts, and so on.
