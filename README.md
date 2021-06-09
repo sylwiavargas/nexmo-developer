@@ -48,6 +48,27 @@ The project can be run on your laptop, either directly or using Docker. These in
 
 ### Setup for running directly on your laptop
 
+### Setting up with Docker
+
+If you don't want to install Ruby & PostgreSQL then you can use docker to sandbox the Vonage API Developer Portal into its own containers. After you [Install Docker](https://docs.docker.com/engine/installation/) run the following:
+
+```sh
+$ git clone git@github.com:Nexmo/nexmo-developer.git
+$ cd nexmo-developer
+```
+
+```bash
+$ docker-compose up
+```
+
+Once `docker-compose up` has stopped returning output, open a new terminal and run `docker-compose run web bundle exec rake db:migrate`.
+
+At this point, open your browser to http://localhost:3000/ and you should see the homepage. The first time you click on `Documentation` it might take 5 seconds or so, but any further page loads will be almost instantaneous.
+
+To stop the server press `ctrl+c`.
+
+> If you get an error that says "We're sorry, but something went wrong." you might need to run the database migrations with `docker-compose run web bundle exec rake db:migrate`
+
 #### System Setup (OSX)
 
 1. Install Homebrew
@@ -120,27 +141,6 @@ The project can be run on your laptop, either directly or using Docker. These in
     ```
 
     You should now be able to see the site on http://localhost:3000/
-
-### Setting up with Docker
-
-If you don't want to install Ruby & PostgreSQL then you can use docker to sandbox the Vonage API Developer Portal into its own containers. After you [Install Docker](https://docs.docker.com/engine/installation/) run the following:
-
-```sh
-$ git clone git@github.com:Nexmo/nexmo-developer.git
-$ cd nexmo-developer
-```
-
-```bash
-$ docker-compose up
-```
-
-Once `docker-compose up` has stopped returning output, open a new terminal and run `docker-compose run web bundle exec rake db:migrate`.
-
-At this point, open your browser to http://localhost:3000/ and you should see the homepage. The first time you click on `Documentation` it might take 5 seconds or so, but any further page loads will be almost instantaneous.
-
-To stop the server press `ctrl+c`.
-
-> If you get an error that says "We're sorry, but something went wrong." you might need to run the database migrations with `docker-compose run web bundle exec rake db:migrate`
 
 ## Admin dashboard
 
