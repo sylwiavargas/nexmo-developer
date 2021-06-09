@@ -56,17 +56,19 @@ The project can be run on your laptop, either directly or using Docker. These in
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     ```
 
-2. Install required packages, create database and configure `git`.
+2. Install required packages.
 
-    Note: A default database is created for you when you run the `db:setup` script. If you'd like to create and
-use a different database or user, use `createdb database_name_here` or `createuser username_here` and make sure your
+    Note: A default database is created for you when you run the `db:setup` script. If you'd like to create and use a different database or user, use `createdb database_name_here` or `createuser username_here` and make sure your
 `.env` file is updated accordingly (See [.env.example](https://github.com/Nexmo/nexmo-developer/blob/master/.env.example)).
     
     ```bash
     brew install postgres rbenv git nvm redis
     brew services start postgresql
     brew services start redis
-    
+    ```
+
+3. Create database and configure `git` -- please notice that `"NAME"` and `"user.name@vonage.com"` are just placeholder values that you need to replace 
+ 
     git config --global user.name "NAME"
     git config --global user.email "user.name@vonage.com"
     ```
@@ -101,14 +103,19 @@ use a different database or user, use `createdb database_name_here` or `createus
    - If you're getting `ruby-build definition not found 2.7.2`, you need to update the xcode: `xcode-select --install`
    - **NOTE**: If you use `rvm`: `rvm --default use 2.7.2 && gem install bundle && bundle install`
 
-6. Set up access to submodules: `git submodule init && git submodule update` and then `git config --global submodule.recurse true`
-7. Start postgres: `brew services start postgresql` and if that doesn't work `brew services restart postgresql`.
+6. Set up access to submodules: 
+
+    ```bash
+       git submodule init && git submodule update
+       git config --global submodule.recurse true
+    ```
+8. Start postgres: `brew services start postgresql`.
    - If you're getting "PG::ConnectionBad - could not connect to server: Connection refused", you can try installing the correct version or re-install postgres: `brew uninstall postgresql && rm -rf /usr/local/bin/postgres && rm -rf .psql_history .psqlrc .psql.local .pgpass .psqlrc.local && brew update && brew install postgres`
 
 8. Start the local server: 
 
     ```bash
-    OAS_PATH=“pwd/_open_api/api_specs/definitions” bundle exec nexmo-developer --docs=`pwd` --rake-ci`
+    OAS_PATH=“pwd/_open_api/api_specs/definitions” bundle exec nexmo-developer --docs=`pwd` --rake-ci
     ```
 
     You should now be able to see the site on http://localhost:3000/
