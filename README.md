@@ -46,8 +46,6 @@ docker-compose exec web ./node_modules/.bin/alex _documentation/en _partials _mo
 
 The project can be run on your laptop, either directly or using Docker. These instructions have been tested for Mac.
 
-### Setup for running directly on your laptop
-
 ### Setting up with Docker
 
 If you don't want to install Ruby & PostgreSQL then you can use docker to sandbox the Vonage API Developer Portal into its own containers. After you [Install Docker](https://docs.docker.com/engine/installation/) run the following:
@@ -68,6 +66,8 @@ At this point, open your browser to http://localhost:3000/ and you should see th
 To stop the server press `ctrl+c`.
 
 > If you get an error that says "We're sorry, but something went wrong." you might need to run the database migrations with `docker-compose run web bundle exec rake db:migrate`
+
+### Setup for running directly on your laptop
 
 #### System Setup (OSX)
 
